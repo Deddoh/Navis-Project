@@ -1,0 +1,382 @@
+body{
+	font-family: Arail, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	padding: 0;
+	margin:0;
+	background-color: #f4f4f4;
+
+}
+
+/*global*/
+.container{
+	width:85%;
+	/*move the page to the middle*/
+	margin: auto;
+	overflow: hidden;
+
+}
+
+.logo{
+	border-radius: 30px;
+	height: 20px;
+	padding-top: 10px;
+	
+}
+
+
+#fontChange{
+	color: orange;
+}
+
+.essential{
+	color: red;
+}
+.common_button{
+	background:#030580;
+	color: #ffffff;
+	font-weight: thin;
+	padding: 15px 120px;
+	border: none;
+	border-radius: 40px;
+	font-size: 26px;
+	
+}
+
+.common_button2{
+	background:#000;
+	color: #ffffff;
+	font-weight: thin;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 6px;
+	font-size: 14px;
+	
+}
+
+
+/*header*/
+header{
+	background: #292A80;
+	color: #fff;
+	padding-top: 30px;
+	min-height: 70px;
+	background-position:all;
+}
+
+header a{
+color: #fff;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 16px;
+}
+
+header ul{
+	margin: 0;
+	padding: 0;
+}
+
+header li{
+	float: left;
+	display: inline;
+	padding: 0 20px;
+}
+
+header #logo-brand{
+	float: right;
+}
+
+header #logo-brand h1{
+	margin:0;
+}
+
+header nav{
+	float: left;
+	margin-top: 10px;
+}
+
+header a:hover{
+	color: orange;
+	font-weight: bold;
+}
+
+
+
+/*case1*/
+#case1{
+	min-height: 500px;
+	background:blue;
+	overflow:hidden;
+/*	background: url("../Images/hand.png") no-repeat center center ;*/
+	    background: linear-gradient(rgba(29, 38, 113, 0.6), rgba(29, 38, 80, 0.8)), url("../Images/g.JPG") no-repeat center center;
+	text-align: center;
+	color: #ffffff;
+}
+
+#case1 h1{
+	margin: 100px 0 10px 0;
+	font-size: 60px;
+}
+
+#case1 p{
+	font-size: 24px;
+	padding-bottom: 0;
+}
+
+
+/*case1 Sign Up button*/
+
+#case1 #registerButton{
+	border: 0;
+	border-radius: 25px;
+	padding: 15px 40px;
+	background: #000000;
+	color: #ffffff;
+}
+
+#case1 #registerButton:hover{
+	color: #e8491d;
+	background: #fff;
+	padding: 15px 52px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border:1px solid blue;
+
+}
+
+/*section*/
+
+/*Register Form*/
+
+
+#register{
+	font-size: 15px;
+	width: 80vw;
+	margin: auto;
+	line-height: 1.5em;
+}
+
+#register legend{
+	font-size: 50px;
+	text-transform: uppercase;
+	text-align: center;
+	padding:80px 0 80px 0;
+}
+#register fieldset{
+	border: 0;
+}
+
+#register fieldset label{
+	float: left;
+	font-size: 24px;
+	padding: 3px;
+}
+
+
+
+ fieldset #input_fields input[type="text"]{
+	float:right;
+	padding: 4px;
+	height: 25px;
+	width: 55%;
+	margin-right: 70px;
+	
+
+}
+
+
+ fieldset #input_fields input[type="email"]{
+	float:right;
+	padding: 4px;
+	height: 25px;
+	width: 55%;
+	margin-right: 70px;
+	
+
+}
+
+ fieldset #input_fields input[type="tel"]{
+	float:right;
+	padding: 4px;
+	height: 25px;
+	width: 55%;
+	margin-right: 70px;
+	
+}
+
+
+ fieldset #input_fields input[type="number"]{
+	float:right;
+	padding: 4px;
+	height: 25px;
+	width: 55%;
+	margin-right: 70px;
+
+}
+
+
+fieldset #select_options h2{
+	font-size: 32px;
+	text-align: center;
+}
+
+fieldset #select_options input[type="checkbox"]{
+margin-left: 490px;
+
+}
+
+fieldset #select_options input[type="radio"]{
+	margin-left: 490px;
+	
+}
+
+ fieldset #submit_button{
+	text-align: center;
+	padding: 50px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Subscribe*/
+
+#newsletter{
+	padding: 15px;
+	color: #fff;
+	background: orange;
+}
+
+#newsletter h1{
+	float: left;
+}
+#newsletter form{
+	float: right;
+	margin-top: 15px;
+}
+
+#newsletter input[type="email"]{
+	padding: 4px;
+	height: 25px;
+	width: 260px;
+}
+
+/*subscription button*/
+
+.subscribe_button{
+	height: 35px;
+	background: #000;
+	border: 0;
+	color: #ffffff;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+/*case2 About us*/
+
+#about_us{
+	min-height: 500px;
+	overflow:hidden;
+	color: #ffffff;
+	text-align: center;
+	color: blue;
+}
+#about_us h1{
+	font-size: 50px;
+	font-weight: bold;
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+	text-decoration-color: black;
+}
+
+#about_us h2{
+	padding-top: 30px;
+	font-weight: bold;
+	font-size: 40px;
+}
+#about_us p{
+	font-size: 24px;
+	color: #000000;
+	padding-bottom: 40px;
+}
+
+#about_us button{
+	padding-bottom: 10px;
+	background: #000;
+}
+
+/*footer*/
+
+#contact {
+	
+	background:  #030580;
+	overflow:hidden;
+	color: #ffffff;
+}
+#contact #contact_form{
+	
+
+
+}
+#contact .box{
+	float: left;
+	width: 50%;
+}
+
+#contact #contact_form input[type="email"]{
+	padding: 10px;
+	width:60%;
+	border-radius: 5px;
+	border:none;
+
+}
+
+#contact #contact_form textarea{
+	padding: 28px;
+	border-radius: 20px;
+	width: 55%;
+}
+
+#contact #contact_form button{
+	margin-left:140px;
+}
+
+#contact #contact_info{
+	padding-top: 60px;
+
+}
+
+#contact_info a{
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+#contact_info #social_media a{
+	padding:0 30px;
+}
+
+footer {
+	padding:20px 20px;
+	color: #ffffff;
+	background-color: #292A80;
+	text-align: center;
+	
+}
+
+footer p{
+	font-size: 25px;
+	font-weight: bold;
+
+}
