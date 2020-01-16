@@ -161,7 +161,7 @@ header .header-buttons{
 /*header showcase*/
 
 header #showcase{
-	background: linear-gradient(rgba(29, 38, 113, 0.4), rgba(29, 38, 80, 0.8)), url('../Images/grge.JPG') no-repeat;
+	background: linear-gradient(rgba(29, 38, 113, 0.4), rgba(29, 38, 80, 0.8)), url('../Images/grge.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
