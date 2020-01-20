@@ -4,7 +4,7 @@
 
 
 
-const form = document.getElementsByTagName('form');
+// const form = document.getElementsByTagName('form');
 var companyName = document.getElementById('company_name');
 	var email = document.getElementById('business_email');
 	var phone = document.getElementById('phone');

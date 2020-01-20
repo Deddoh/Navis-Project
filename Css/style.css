@@ -73,7 +73,7 @@ header .header-buttons{
 	min-height: 45px;
 	font-family: Muller Narrow Medium;
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 20px;
 	color: #fff;
 
 }
@@ -84,7 +84,8 @@ header .header-buttons{
 
 .header-buttons ul{
 	display: flex;
-	justify-content: center;
+
+	justify-content: space-around;
 	width: 100%;
 	margin:0;
 	padding: 0;
@@ -117,14 +118,17 @@ header .header-buttons{
 	display: flex-block;
 	padding-top:200px;
 	text-align: center;
+	align-items: center;
+	margin: 0 auto;
+
 	
 }
 
 
-.tag p{
+/*.tag p{
 	padding-bottom: 20px;
 }
-
+*/
 .tag a{
 	padding: 12px 42px;
 	border: 0;
@@ -143,16 +147,16 @@ header .header-buttons{
 	border:1px solid blue;
 }
 .tag h1{
-	font-family:'Muller Medium';
-	font-weight:normal;
-	font-size:65px;
+	font-family:'Muller Narrow Light';
+	font-weight:medium;
+	font-size:55px;
 	color: #ffffff;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 }
 .tag p{
 	font-family: Muller Narrow Light;
-	font-weight: normal;
-	font-size: 40px;
+	font-weight: medium;
+	font-size: 24px;
 	color: #fff;
 	padding-bottom: 30px;
 
@@ -161,7 +165,7 @@ header .header-buttons{
 /*header showcase*/
 
 header #showcase{
-	background: linear-gradient(rgba(29, 38, 113, 0.4), rgba(29, 38, 80, 0.8)), url('../Images/grge.jpg') no-repeat;
+	background: linear-gradient(rgba(29, 38, 113, 0.75), rgba(29, 38, 80, 0.9)), url('../Images/grge.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
@@ -170,11 +174,17 @@ header #showcase{
 
 /*section area*/
 /*general*/
-section #about-us, #services, #case-study, #register{
+section #about-us{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	
+}
+section #register{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 	
 }
 
@@ -257,6 +267,16 @@ article p{
 	padding-top: 100px;
 	text-align: center;
 }
+
+/*@media screen and (max-width: 70px){
+	article{
+		display: flex;
+		align-items: center;
+		
+		flex-flow: column wrap;
+		
+	}
+}*/
 /*end about-us*/
 
 
