@@ -92,7 +92,7 @@
 	</section> -->
 	<section id="newsletter" class="sec">
 		<h1>Subscribe to our newsletter</h1>
-		<form>
+		<form id="subscription_form">
 			<input type="email" name="email" placeholder="Enter email..." pattern=".+@.+\..+">
 			<button type="submit" class="subscribe_button">Subscribe</button>
 		</form>
@@ -105,7 +105,7 @@
 
 
 	<section id="register" class="sec">
-<form id="registration-form" method="POST">
+<form id="registration-form" method="POST" action="Js/db.js">
 	<!-- progressbar -->
 
 	<ul id="progressbar">
@@ -122,7 +122,7 @@
 			<label>Phone</label><span class="essential">*</span><br><br>
 			<input type="tel" name="phone" placeholder=" &nbsp; &nbsp; &nbsp; &nbsp;070 &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp; &nbsp;000&nbsp; &nbsp; &nbsp;- &nbsp; &nbsp; &nbsp;0000" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10" id="phone" required><br><br>
 			<label>Sector <span class="essential">*</span></label><br><br>
-			<select required>
+			<select required id="sector">
 				<option value="Agriculture and forestry">Agriculture and forestry</option>
 							<option value="Mining and quarrying">Mining and quarrying</option>
 							 <option value= "Manufacturing">Manufacturing</option>
@@ -140,7 +140,7 @@
 							          <option value= "Arts and entertainment"> Arts and entertainment</option>
 			</select><br><br>
 			<label>Monthly Revenue</label><span class="essential">*</span><br><br>
-			<input type="number" name="revenue" id="monthly_revenue" required><br><br>
+			<input type="text" name="revenue" id="monthly_revenue" required><br><br>
 <input type="submit" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
@@ -149,12 +149,12 @@
 		<h2>How do you <span class="highlight"> track </span>business expenses?</h2>
 		<div  id="select_options">
 			<div class="cbox">
-		<input type="checkbox" name="excel" id="box1"> Excel<br>
-		<input type="checkbox" name="word" id="box2">Written records<br>
-		<input type="checkbox" name="qb" id="box3"> QuickBooks<br>
-		<input type="checkbox" name="sage" id="box4">Sage<br>
-		<input type="checkbox" name="sap" id="box5">SAP<br>
-		<input type="checkbox" name="other" id="box6">Other ERP software<br>
+		<input type="checkbox" name="track" id="box1"> Excel<br>
+		<input type="checkbox" name="track" id="box2">Written records<br>
+		<input type="checkbox" name="track" id="box3"> QuickBooks<br>
+		<input type="checkbox" name="track" id="box4">Sage<br>
+		<input type="checkbox" name="track" id="box5">SAP<br>
+		<input type="checkbox" name="track" id="box6">Other ERP software<br>
 </div><br>
 <div class="rbox">
 		<h2>Would you like to participate in <span class="highlight">early access</span>?</h2>
@@ -217,11 +217,31 @@
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC_bBlnZT4qy1QonXpZTTyrnbSo3aiagFU",
+    authDomain: "navis-4b50f.firebaseapp.com",
+    databaseURL: "https://navis-4b50f.firebaseio.com",
+    projectId: "navis-4b50f",
+    storageBucket: "navis-4b50f.appspot.com",
+    messagingSenderId: "385737457607",
+    appId: "1:385737457607:web:52d4b06d187a248019a3e2",
+    measurementId: "G-2X3GW0X7PV"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
 <script src="Js/db.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> -->
