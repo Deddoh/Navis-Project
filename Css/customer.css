@@ -1,0 +1,228 @@
+
+/*global*/
+
+html, body{
+	height: 100%;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	background: #f0f0f0;
+	font-size: 20px;
+	font-family: 'Muller Narrow Light';
+	font-weight: normal;
+	color: #ffffff;
+	margin: 0;
+}
+
+
+.logo{
+	height: 16px;
+}
+
+/*main as a flexible container */
+
+main{
+	flex: 1 0 auto;
+	/*background-color: #222;*/
+	display: flex;
+	flex-direction: column;
+}
+
+/*styling the showcase area*/
+#showcase{
+	background: linear-gradient(rgba(29, 38, 113, 0.4), rgba(29, 38, 80, 0.8)), url('../Images/grge.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	flex: 0 0 200px;
+	display: inline-flex;
+	justify-content: flex-end;
+}
+
+
+
+#showcase a{
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	padding: 10px 0 0 10px;
+	margin:0;
+}
+#showcase p{
+	margin-top: 4px;
+	padding-right: 10px;
+}
+
+/*table buttons*/
+#data_tables{
+	display: flex;
+	flex:1 1 auto;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+#data_tables .buttons{
+	flex: 0 1 70px;
+	/*background: #fff;*/
+	padding: 2px;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.buttons button{
+	background: #555;
+	flex: 1 1 auto;
+	border-radius: 3px;
+	border: 0;
+	margin:10px;
+	color: #fff;
+
+}
+
+.buttons button:hover{
+	background: green;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+}
+/*section to display tables*/
+
+#table_display{
+	width: 100%;
+}
+
+.flex_table{
+	display: flex;
+		flex-direction: column;
+	justify-content: flex-start;
+	flex: 1 1 auto;
+	flex-flow: row wrap;
+/*margin: 0 auto;*/
+/*box-sizing: border-box;
+*/border-collapse: collapse;
+}
+
+
+.th{
+
+	background:blue;
+	color: #fff;
+	flex: 1 1 150px;
+	flex-flow: row wrap;
+	display: table;
+	flex-direction: row;
+	padding:35px;
+	
+	
+}
+
+
+
+
+.tr{
+	width: 100%;
+	color: #000;
+	border-spacing: 20px;
+	flex-flow: row wrap;
+	display: table;
+	flex-direction: row;
+	flex: 0 1 auto;
+}
+
+
+/*.tr:nth-child(n){
+color: red;
+border:1px solid black;
+border-collapse: collapse;
+padding:30px;
+border-spacing: 10px;
+
+}
+*/
+
+
+ .th:nth-child(3){
+	color: green;
+}
+
+
+
+
+/*new table layout*/
+table{
+	border-collapse:collapse;
+	margin: 5px auto;
+	box-sizing: border-box;
+	width: 90vw;
+	border-top: 0;
+	border-bottom: 0;
+	border-right: 0;
+	border-left: 0;
+
+}
+ #clientsTable, #financeTable{
+	display: none;
+}
+
+
+.hidden{
+	display: none;
+}
+.head{
+	background: #fff;
+	color: #000;
+}
+th{
+padding: 25px 0;
+}
+tr td{
+	text-align: center;
+	padding: 12px;
+	color: #000000;
+	background: #fff;
+}
+
+/*.confirmButtons{
+	display: none;
+}*/
+
+.agreeFinanceStatus{
+	background: green;
+	color: #fff;
+	padding:5px 20px;
+	border:0;
+	border-radius: 4px;
+	margin-bottom: 8px;
+}
+
+.cancelFinanceStatus{
+	background: #555;
+	padding:10px;
+	color: #fff;
+	border:0;
+	border-radius: 4px;
+	padding:5px 20px;
+}
+
+.cancelFinanceStatus:hover{
+	background: red;
+}
+
+/*end of main section*/
+
+
+
+
+/*footer*/
+footer{
+	flex: 0 0 50px;
+    background-color: #292A80; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+footer h1{
+
+}

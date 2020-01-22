@@ -88,6 +88,7 @@ const subscribeForm = document.getElementById('#subscription_form');
         form.addEventListener('submit', function (evt) {
             evt.preventDefault();
             firebasePush(companyName, email, phone, sector, monthlyRevenue, radio );
+            url: 'customer.html';
            function sendEmailVerification() {
       // [START sendemailverification]
 
@@ -137,7 +138,7 @@ var actionCodeSettings = {
 
 
 
- function firebasePush( email ) {
+ function firebasesubscribersPush( email ) {
 
 
         //prevents from braking
@@ -160,7 +161,7 @@ var actionCodeSettings = {
     if (subscribeForm) {
         subscribeForm.addEventListener('submit', function ($event) {
             $event.preventDefault();
-            firebasePush(email );
+            firebasesubscribersPush(email );
 
             //shows alert if everything went well.
             return alert('Data Successfully Sent to Realtime Database');
