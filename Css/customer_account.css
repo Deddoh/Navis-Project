@@ -56,13 +56,13 @@ main{
 
 aside{
 	flex: 0 0 30px;
-	color: #000;
+	color: #fff;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 	/*border:1px solid black;*/
-	background: #fff;
+	background: #000;
 }
 
 li{
