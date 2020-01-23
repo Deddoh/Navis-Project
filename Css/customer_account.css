@@ -4,6 +4,7 @@ html, body{
 	font-family: 'Muller Narrow Light';
 	font-size: 20px;
 	font-weight: normal;
+	color: #000;
 }
 
 .logo{
@@ -55,7 +56,7 @@ main{
 }
 
 aside{
-	flex: 0 0 30px;
+	flex: 0 0 50px;
 	color: #fff;
 	display: flex;
 	flex-direction: column;
@@ -63,6 +64,10 @@ aside{
 	align-items: center;
 	/*border:1px solid black;*/
 	background: #000;
+}
+ /*font size for the icons*/ 
+aside i .fa {
+	font-size: 0.9em;  
 }
 
 li{
@@ -79,30 +84,76 @@ li{
 	width: 100%;
 }
 
+/*top nav section*/
+
+#top_nav{
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	padding:0 5px;
+	background: #fff;
+	box-shadow:  0 0 15px 1px rgba(0, 0, 0, 0.15);
+}
+
+#top_nav div{
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#top_nav p{
+	padding-left: 20px;
+}
+
+/*.container{
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}*/
+.container a{
+	text-decoration: none;
+	cursor: pointer;
+	color: #000;
+	/*padding:10px 5px 0 30px;*/
+}
+.container  .fa{
+	/*margin: 0 10px 10px 10px;*/
+}
+ .home a{
+	color: #000;
+	text-decoration: none;
+	padding-right: 30px;
+}
 
 /*styling the showcase area*/
-#showcase{
+/*#showcase{
 	background: linear-gradient(rgba(29, 38, 113, 0.2), rgba(29, 38, 80, 0.7)), url('../Images/grge.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
-	flex: 0 0 150px;
+	flex: 0 0 100px;
 	display: inline-flex;
-	justify-content: flex-end;
-	margin: 10px;
+	/*justify-content: flex-end;
+	margin-top: 10px;
+}*/
+
+/*performance area*/
+
+#performance{
+	background: #fff;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin:10px 0 10px 15px;
+	width: calc(100vw - 100px);
+	box-sizing: border-box;
+	box-shadow:   0 0 15px 1px rgba(0, 0, 0, 0.15);
 }
 
-
-
-#showcase a{
-	text-decoration: none;
-	color: #fff;
-	cursor: pointer;
-	padding: 10px 0 0 10px;
-	margin:0;
-}
-#showcase p{
-	margin-top: 4px;
-	padding-right: 10px;
+.performanceContainer .count, .fas{
+	font-size: 44px;
 }
 
 /*company details table*/
@@ -111,20 +162,21 @@ li{
 	border-collapse: collapse;
 	background: #fff;
 	box-sizing: border-box;
-	box-shadow:  0 0 15px 1px rgba(0, 0, 0, 0.4);
+	box-shadow:  0 0 15px 1px rgba(0, 0, 0, 0.15);
 	margin: 10px auto ;
-	width: 90vw;
-	border-top: 0;
+	width: 93vw;
+/*	border-top: 0;
 	border-bottom: 0;
 	border-left: 0;
-	border-right: 0;
+	border-right: 0;*/
+	border:0;
 }
 
 tr td{
 	padding: 15px;
 }
-#company01:nth-child(2n){
-	background: #f2f2f2;
+#company01 tr:nth-child(2n){
+	background: #f1f1f1;
 }
 #company01 .rname{
 	width: 300px;
@@ -146,29 +198,33 @@ tr td{
 
 /*mpesa table*/
 #payment01{
+	border-collapse: collapse;
 	width: 30vw;
 	margin: 10px auto;
-	border-top: 0;
+	/*border-top: 0;
 	border-bottom: 0;
 	border-left: 0;
-	border-right: 0;
+	border-right: 0;*/
+	border:none;
 	min-height: 223px;
 	background: #fff;
 	box-sizing: border-box;
-	box-shadow:  0 0 15px 1px rgba(0, 0, 0, 0.4);
+	box-shadow:  0 0 15px 1px rgba(0, 0, 0, 0.15);
 }
 
 /*bank table*/
 #payment02{
 width: 60vw;
 	margin: 10px auto;
-	border-top: 0;
+	/*border-top: 0;
 	border-bottom: 0;
 	border-left: 0;
-	border-right: 0;
+	border-right: 0;*/
+	border: none;
 	background: #fff;
 	box-sizing: border-box;
-	box-shadow:  0 0 15px 1px rgba(0, 0, 0, 0.4);
+	border-collapse: collapse;
+	box-shadow:  0 0 15px 1px rgba(0, 0, 0, 0.15);
 }
 
 /*footer*/

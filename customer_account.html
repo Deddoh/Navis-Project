@@ -3,36 +3,86 @@
 <head>
 	<title>Navis | Account</title>
 	<link rel="stylesheet" type="text/css" href="Css/customer_account.css">
-	<!-- <link rel="stylesheet" type="text/css" href="Css/customer.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="Css/small.css"> -->
 	<!-- font style -->
 	<link rel="stylesheet" type="text/css" href="font-muller/fonts.css">
+	<link rel="stylesheet" type="text/css" href="https://kit.fontawesome.com/fontawesome.css">
+	<script src="https://kit.fontawesome.com/98ec3ee8d0.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 
 <main>
 	<aside>
-		<p>Notifications</p>
-		
-		<li>Invoice viewed</li>
-		<li>Invoice financed</li>
-		<li>Invoice paid</li>
+		 <!-- <i class="fa fa-bars"></i>  -->
+		  <a href="index.html"><i class="fa fa-home"></i> </a>
+		  <a href=""><i class="fa fa-bell"></i></a>
+		  <a href=""><i class="fa fa-hand-holding-usd"></i></a>
+		<a href=""><i class="fa fa-print"></i></a>
+		  <a href=""><i class="fa fa-file-download"></i></a>
+		  <a href=""><i class="fa fa-cog"></i></a>
 	
 	</aside>
 
 <section class="content">
-	<section id="showcase">
+	<section id="top_nav">
+		<p>Welcome</p>
 		<div>
-			<a href="customer_account.html"> <img src="Images/logo.jpg" alt="account_logo" class="logo">
-			<p>MyAccount</p></a>
+		<div  class="home">
+			<p><a href="index.html"> Home </a></p>
+		</div>
+
+		<div class="container">
+			<a href="customer_account.html"> <i class="fa fa-user"></i> </a>
+			<!-- <a href="customer_account.html"><p>MyAccount</p></a> -->
+
+		</div>
+
 		</div>
 	</section>
+<!-- 	<section id="showcase">
+	
+	</section> -->
+
+<!-- <section class="portfolio">
+	<table id="performance" border="0" cellpadding="1" width="100%">
+		
+
+		<th colspan="4">Performance</th>
+		<tr>
+			<td><i class="fa fa-file-invoice-dollar"></i><span>15</span><br> Total Invoices</td>
+			<td><i class="fa fa-users"></i> <span>20</span><br>Clients</td>
+			<td><i class="fa fa-hand-holding-usd"></i><span>30</span></br>Financed Invoices</td>
+		</tr>
+	</table>
+
+
+
+</section> -->
+
+<section id="portfolio">
+	<div id="performance">
+		<div class="performanceContainer">
+		<p>	<i class="fas fa-file-invoice-dollar"></i><span class="count" >15</span><br> Total Invoices</p>
+		</div>
+		<div class="performanceContainer">
+			<p><i class="fas fa-users"></i><span class="count">20</span><br>Clients Served</p>
+		</div>
+		<div class="performanceContainer">
+			<p><i class="fas fa-hand-holding-usd"></i><span class="count">30</span></br>Financed Invoices</p>
+		</div>
+		
+	</div>
+</section>
+
 
 <section id="company_details">
 	<div id="company">
 
-		<table id="company01" border="1" width="100%" cellpadding="1" cellspacing="0">
-			<caption>Company Details</caption>
+		<table id="company01"  width="100%" cellpadding="1" cellspacing="0">
+			<th colspan="2" class="title">
+				Company Details
+			</th>
 				<tr>
 					<td class="rname">Company Name</td>
 					<td id="company_name" readonly class="fill">AfyaKit</td>
@@ -67,7 +117,9 @@
 
 
 		<table id="payment02" border="1" width="100%" cellpadding="1" cellspacing="0">
-			<caption>Bank</caption>
+			<th colspan="2">
+				Bank
+			</th>
 				<tr>
 					<td class="rname">Swift Code</td>
 					<td id="company_name" readonly class="fill">AfyaKit</td>
@@ -86,8 +138,8 @@
 				</tr>
 		</table>
 		
-		<table id="payment01" border="1" width="100%" cellpadding="1" cellspacing="0">
-			<caption>Mpesa</caption>
+		<table id="payment01" border="0.5" width="100%" cellpadding="1" cellspacing="0">
+			<th colspan="2">Mpesa</th>
 				<tr>
 					<td class="rname">Company Name</td>
 					<td id="company_name" readonly class="fill">AfyaKit</td>
@@ -105,8 +157,8 @@
 </main>
 
 
-<footer>
+<!-- <footer>
 	<p> Navis Copyright &copy; 2020</p>
-</footer>
+</footer> -->
 </body>
 </html>
