@@ -4,12 +4,16 @@
 <html>
 <head>
 	<title>Navis | Welcome</title>
-	
+	<script type="text/javascript" src="Js/jquery-3.3.1.min.js"></script>
+	 <link rel="stylesheet" href="Css/floating-wpp.css">
+    <script type="text/javascript" src="Js/floating-wpp.js"></script>
 	<link rel="icon" href="Images/logo.jpg">
 	<link rel="stylesheet" type="text/css" href="Css/style.css">
 	<!-- font style -->
 	<link rel="stylesheet" type="text/css" href="font-muller/fonts.css">
+	
 	<script type="text/javascript" src="Js/main.js"></script>
+	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +22,8 @@
 	<meta name="author" content="Dedan Njoroge">
 </head>
 <body>
+
+
 
 
 	<header>
@@ -29,7 +35,7 @@
 		<nav class="navbar">
 			<ul>
 				<!-- <li><a href="#about-us">about</a></li> -->
-				<li><a href="#registration-form">early access</a></li>
+				<li><a href="#register">early access</a></li>
 				<li><a href="#contact">contact</a></li>
 			</ul>
 		</nav>
@@ -47,6 +53,7 @@
 			<h1>AI-driven <span class="highlight"> working capital finance</span> for small businesses</h1>
 			<p>Sign up for early access</p>
 			<a href="#register" class="navbar"> Sign up</a>
+			
 </div>
 		
 	</section>
@@ -55,48 +62,6 @@
 
 <main >
 		
-	<!-- <section id="about-us" class="sec">
-
-		<h1 id="who">Who we are</h1>
-		<div>
-			<h2>We help <span class="highlight"> small businesses  </span>grow, by financing them with <span class="highlight"> working capital</span></h2>
-			<p>Scaling small businesses with AI-driven financial analytics</p>
-		</div>
-		<article >
-			<div class="quoted">
-			<p >There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-		</div>
-		<div class="vision-quote">
-			<h1>Vision:</h1>
-			<p ><span class="bold">"</span> 
-				Lead the future with AI-driven <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; working capital finance <span class="bold">"</span> 
-			</p>
-		</div>
-		</article>
-		<div id="learn_more_button">
-
-			<button type="submit" class="common_button" >Learn More</button>
-			</div>
-
-		
-	</section> -->
-
-	<!-- <section id="services" class="sec">
-		<h1>Services</h1>
-		
-	</section>
-
-	<section id="case-study" class="sec">
-		<h1>Case study</h1>
-		
-	</section> -->
-	
-
-
-
-
-
-
 	<section id="register" class="sec">
 <form id="registration-form" method="POST" action="Js/db.js">
 	<!-- progressbar -->
@@ -203,6 +168,8 @@
 
 
 </main>	
+<!-- <a href="https://api.whatsapp.com/send?phone=254740477891&text=urlencodedtext">Send Message</a> -->
+  
 
 	<footer>
 		<div >
@@ -245,7 +212,7 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="Js/db.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	<!-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> -->
 
 <script
@@ -255,6 +222,26 @@
 	<script type="text/javascript" src="Js/scrollable.js"></script>
 	<script type="text/javascript" src="Js/multiStep.js"></script>
 	<script type="text/javascript" src="Js/main.js"></script>
+<div class="myButton"></div>
+
 
 </body>
+	<!-- whatsapp button -->
+<script type="text/javascript">
+    $(function () {
+        $('.myButton').floatingWhatsApp({
+            phone: '18573166942',
+            popupMessage: 'Hello, would you like to grow your business? Tell us how can we help you?',
+            message: "I'd like to learn more on what you deliver",
+            showPopup: true,
+            showOnIE: true,
+            headerTitle: '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Welcome To Navis ',
+            headerColor: 'green',
+            backgroundColor: '#fff',
+            buttonImage: '<img src="Images/whatsapp.svg" />',
+            autoOpenTimeout: '0',
+            position: 'right'
+        });
+    });
+</script>
 </html>
