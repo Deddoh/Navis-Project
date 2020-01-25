@@ -129,17 +129,22 @@ tr td{
 	background: #fff;
 }
 
-/*#financeTable th td:nth-child(2n){
-	background: #f0f0f0;
-}*/
-
 .confirmButtons, .confirmActionButtonsTitle{
 	display: none;
 	background: yellow;
 }
-.confirmMultipleButtons{
+.confirmMultipleDivButtons{
 	display:none;
+	padding-bottom: 15px;
+	margin: 0 auto; 
 
+	
+
+}
+#display03{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .agreeFinanceStatus{
@@ -148,7 +153,6 @@ tr td{
 	padding:5px 20px;
 	border:0;
 	border-radius: 4px;
-	margin-bottom: 8px;
 	width: 100px;
 	transition: all .7s ease-in-out;
 }
