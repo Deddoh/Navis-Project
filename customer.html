@@ -428,14 +428,12 @@
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
 						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
-					<tr>
-						
-						<td class="confirmMultipleButtons" colspan = "6"><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button>
-						</td>
-						
-						
-					</tr>
+					<div class="confirmMultipleDivButtons">
+						<button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;
+						<button type="button" class="cancelFinanceStatus"> Cancel </button>
+					</div>
 				</table>
+
 			</div>
 
 
@@ -470,16 +468,14 @@
 			$(".confirmActionButtonsTitle").show();
 		}
 //else if more than one checkbox is checked, hide the action bar on the right, and display it at the bottom
-		else if($("#financeTable input:checkbox:checked").length > 1){
-			$(".confirmMultipleButtons").show();
-			$(".confirmMultipleButtons").css("display", "table-cell");
+		else if($("#financeTable input:checkbox:checked").length > 1 && $(".confirmMultipleDivButtons").css("display", "none")){
+			$(".confirmMultipleDivButtons").css("display","flex");
+			$(".confirmMultipleDivButtons").show();			
+			$(".confirmMultipleDivButtons").css("padding-left","45%");
+			$(".confirmMultipleDivButtons").css("padding-top","23%");
+			$(".confirmMultipleDivButtons").css("position","fixed");
 			$(this).parents("tr:eq(0)").find(".confirmButtons").css("display","none");
 			$(".confirmActionButtonsTitle").css("display","none");
-
-
-
-			// $(this).parents("tr:eq(0)").find(".confirmButtons").hide();
-			// $(".confirmActionButtonsTitle").hide();
 			
 
 		}
@@ -489,7 +485,7 @@
 		else{
 			$(this).parents("tr:eq(0)").find(".confirmButtons").hide();
 			$(".confirmActionButtonsTitle").hide();
-			$(".confirmMultipleButtons").hide();
+			$(".confirmMultipleDivButtons").hide();
 		}
 	});
 
@@ -500,8 +496,4 @@
 	});
 
 </script>
-
-
-
-
 </html>
