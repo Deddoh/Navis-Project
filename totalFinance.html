@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navis | Total</title>
+	<link rel="stylesheet" type="text/css" href="Css/totalfinance.css">
+		<!-- font style -->
+	<link rel="stylesheet" type="text/css" href="font-muller/fonts.css">
+	<!-- fontawesome library -->
+		<link rel="stylesheet" type="text/css" href="https://kit.fontawesome.com/fontawesome.css">
+	<script src="https://kit.fontawesome.com/98ec3ee8d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="total_finance">
+	<div class="title">
+	<h3>Total Finance</h3>
+	<h3><a href="customer.html"><i class="fa fa-arrow-left"></i> &nbsp; Back</h3></a>
+	</div>
+	<div class="subTitle">
+	<h4>Invoice</h4>
+	<h4><span class="price"><i class="fa fa-shopping-cart"></i><b id="numberOfInvoices">&nbsp;20</b></span></h4>
+	</div>
+	<div class="selection">
+		<p class="selectedInvoice">1001</p>
+		<p><span class="price">$ &nbsp;20</span></p>
+	</div>
+	<div>
+<hr>
+</div>
+	<div id="total">
+		<h4>Total</h4>
+		<h4><span id="totalAmount">$500</span></h4>
+	</div>
+	<div id="totalButton">
+		<input type="submit" name="totalFinanceAmount" class="submitButton" value="Submit">
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+<script>
+	document.querySelector('.submitButton').addEventListener('click', ($event) =>{
+		$event.preventDefault();
+		window.location.replace("thankNote.html", '_blank');
+	}, setTimeout(10000));
+</script>
+
+
+</html>

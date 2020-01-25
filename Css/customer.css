@@ -8,7 +8,7 @@ html, body{
 body{
 	display: flex;
 	flex-direction: column;
-	background: #f0f0f0;
+	background: #c4c4c4;
 	font-size: 20px;
 	font-family: 'Muller Narrow Light';
 	font-weight: normal;
@@ -92,60 +92,6 @@ main{
 	width: 100%;
 }
 
-.flex_table{
-	display: flex;
-		flex-direction: column;
-	justify-content: flex-start;
-	flex: 1 1 auto;
-	flex-flow: row wrap;
-/*margin: 0 auto;*/
-/*box-sizing: border-box;
-*/border-collapse: collapse;
-}
-
-
-.th{
-
-	background:blue;
-	color: #fff;
-	flex: 1 1 150px;
-	flex-flow: row wrap;
-	display: table;
-	flex-direction: row;
-	padding:35px;
-	
-	
-}
-
-
-
-
-.tr{
-	width: 100%;
-	color: #000;
-	border-spacing: 20px;
-	flex-flow: row wrap;
-	display: table;
-	flex-direction: row;
-	flex: 0 1 auto;
-}
-
-
-/*.tr:nth-child(n){
-color: red;
-border:1px solid black;
-border-collapse: collapse;
-padding:30px;
-border-spacing: 10px;
-
-}
-*/
-
-
- .th:nth-child(3){
-	color: green;
-}
-
 
 
 
@@ -183,9 +129,18 @@ tr td{
 	background: #fff;
 }
 
-/*.confirmButtons{
-	display: none;
+/*#financeTable th td:nth-child(2n){
+	background: #f0f0f0;
 }*/
+
+.confirmButtons, .confirmActionButtonsTitle{
+	display: none;
+	background: yellow;
+}
+.confirmMultipleButtons{
+	display:none;
+
+}
 
 .agreeFinanceStatus{
 	background: green;
@@ -194,19 +149,29 @@ tr td{
 	border:0;
 	border-radius: 4px;
 	margin-bottom: 8px;
+	width: 100px;
+	transition: all .7s ease-in-out;
 }
 
+
 .cancelFinanceStatus{
-	background: #555;
+	background: red;
 	padding:10px;
 	color: #fff;
 	border:0;
 	border-radius: 4px;
 	padding:5px 20px;
+	width: 100px;
+	transition: all .7s ease-in-out;
 }
 
-.cancelFinanceStatus:hover{
-	background: red;
+ .agreeFinanceStatus:hover{
+	transform: scale(1.25);
+	
+}
+ .cancelFinanceStatus:hover{
+	transform: scale(1.25);
+	
 }
 
 /*end of main section*/

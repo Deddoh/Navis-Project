@@ -6,6 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="Css/customer.css">
 	<!-- font style -->
 	<link rel="stylesheet" type="text/css" href="font-muller/fonts.css">
+	<!-- fontawesome library -->
+		<link rel="stylesheet" type="text/css" href="https://kit.fontawesome.com/fontawesome.css">
+	<script src="https://kit.fontawesome.com/98ec3ee8d0.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	
 </head>
 <body>
@@ -15,7 +19,7 @@
 		
 		<section id="showcase">
 		<div>
-			<a href="customer_account.html"> <img src="Images/logo.jpg" alt="account_logo" class="logo">
+			<a href="customer_account.html"> <i class="fa fa-user"></i>
 			<p>MyAccount</p></a>
 		</div>
 
@@ -322,7 +326,7 @@
 			<!-- finance table -->
 
 			<div  id="display03">
-				<table  id="financeTable" cellpadding="1" cellspacing="0" border="1" >
+				<table  id="financeTable" cellpadding="1" cellspacing="0" border="1">
 					<thead class="head">
 						<th>Invoice</th>
 						<th>Client</th>
@@ -330,7 +334,7 @@
 						<th>Monthly Rate</th>
 						<th>Platform Fees</th>
 						<th>Status</th>
-						<th></th>
+						<th class="confirmActionButtonsTitle">Actions</th>
 					</thead>
 					<tr>
 						<td>1001</td>
@@ -339,7 +343,7 @@
 						<td>20%</td>
 						<td>$100.18</td>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						<td class="confirmButtons" ><button type="submit" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
 					<tr>
 						<td>1001</td>
@@ -348,7 +352,7 @@
 						<td>20%</td>
 						<td>$100.18</td>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td class="confirmButtons"><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
 				
 					<tr>
@@ -358,7 +362,7 @@
 						<td>20%</td>
 						<td>$100.18</td>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td class="confirmButtons"><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
 					<tr>
 						<td>1001</td>
@@ -367,7 +371,7 @@
 						<td>20%</td>
 						<td>$100.18</td>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td class="confirmButtons"><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
 					<tr>
 						<td>1001</td>
@@ -376,7 +380,7 @@
 						<td>20%</td>
 						<td>$100.18</td>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td id="confirmButtons"><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
 					<tr>
 						<td>1001</td>
@@ -385,7 +389,7 @@
 						<td>20%</td>
 						<td>$100.18</td>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td id="confirmButtons"><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
 					<tr>
 						<td>1001</td>
@@ -394,7 +398,7 @@
 						<td>20%</td>
 						<td>$100.18</td>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td id="confirmButtons"><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
 					<tr>
 						<td>1001</td>
@@ -403,7 +407,17 @@
 						<td>20%</td>
 						<td>$100.18</td>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td id="confirmButtons"><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+					</tr>
+					<tr>
+						
+						<td>1001</td>
+						<td>CustomerA</td>
+						<td>$1,500.00</td>
+						<td>20%</td>
+						<td>$100.18</td>
+						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
+						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
 					<tr>
 						<td>1001</td>
@@ -412,16 +426,14 @@
 						<td>20%</td>
 						<td>$100.18</td>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td id="confirmButtons"><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						<td class="confirmButtons" ><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button></td>
 					</tr>
 					<tr>
-						<td>1001</td>
-						<td>CustomerA</td>
-						<td>$1,500.00</td>
-						<td>20%</td>
-						<td>$100.18</td>
-						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
-						<td id="confirmButtons"><button type="button" class="agreeFinanceStatus"> Agree </button><br><button type="button" class="cancelFinanceStatus"> Cancel </button></td>
+						
+						<td class="confirmMultipleButtons" colspan = "6"><button type="button" class="agreeFinanceStatus"> Agree </button> &nbsp; &nbsp; &nbsp;<button type="button" class="cancelFinanceStatus"> Cancel </button>
+						</td>
+						
+						
 					</tr>
 				</table>
 			</div>
@@ -446,4 +458,50 @@
 	<script src="Js/main.js"></script>
 
 </body>
+
+<!-- finance toggle buttons -->
+<script>
+//listen to the change listener:
+//if only one checkbox is checked, display the title and the action bar to the right
+	$("#financeTable input[name='checkbox']").change(function(){
+		if ($("#financeTable input:checkbox:checked").length == 1) {
+			$(this).parents("tr:eq(0)").find(".confirmButtons").show();
+			$(this).parents("tr:eq(0)").find(".confirmButtons").css("display","table-cell");
+			$(".confirmActionButtonsTitle").show();
+		}
+//else if more than one checkbox is checked, hide the action bar on the right, and display it at the bottom
+		else if($("#financeTable input:checkbox:checked").length > 1){
+			$(".confirmMultipleButtons").show();
+			$(".confirmMultipleButtons").css("display", "table-cell");
+			$(this).parents("tr:eq(0)").find(".confirmButtons").css("display","none");
+			$(".confirmActionButtonsTitle").css("display","none");
+
+
+
+			// $(this).parents("tr:eq(0)").find(".confirmButtons").hide();
+			// $(".confirmActionButtonsTitle").hide();
+			
+
+		}
+
+
+//finally if none is checked, display no action bars
+		else{
+			$(this).parents("tr:eq(0)").find(".confirmButtons").hide();
+			$(".confirmActionButtonsTitle").hide();
+			$(".confirmMultipleButtons").hide();
+		}
+	});
+
+
+// navigate to finance page when agree button is clicked
+	$(".agreeFinanceStatus").click(function(){
+		window.location.replace("totalFinance.html", '_blank');
+	});
+
+</script>
+
+
+
+
 </html>
