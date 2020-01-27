@@ -38,7 +38,7 @@
 body{
 	font-family: 'Muller Narrow Light';
 	font-size: 16px;
-	color: #fff;
+	color: #030580;;
 	line-height: 1.6;
 	margin:0;
 	background: #f4f4f4;
@@ -69,7 +69,7 @@ header .header-buttons{
 	z-index: 1;
 	display: flex;
 	justify-content: space-between;
-	background-color: #292A80;
+	/*background-color: #292A80;*/
 	min-height: 45px;
 	font-family: Muller Narrow Medium;
 	font-weight: normal;
@@ -108,6 +108,13 @@ header .header-buttons{
 	color: orange;
 }
 
+/*header scroll*/
+
+.header-buttons.scrolled{
+	background-color: #292A80 !important;
+	transition: background-color 200ms linear;
+}
+
 /*company logo*/
 #logo-brand h1{
 	margin-right: 40px;
@@ -119,20 +126,14 @@ header .header-buttons{
 /*tab area*/
  .tag{
 	display: flex-block;
-	padding-top:200px;
+	padding-top:16%;
 	text-align: center;
 	align-items: center;
 	margin: 0 auto;
 
 	
 }
-
-
-/*.tag p{
-	padding-bottom: 20px;
-}
-*/
-.tag a{
+.tag #navbarRegister{
 	padding: 12px 42px;
 	border: 0;
 	color: #fff;
@@ -141,7 +142,7 @@ header .header-buttons{
 	text-decoration: none;
 	margin-top: 20px;
 }
-.tag a:hover{
+.tag #navbarRegister:hover{
 	padding: 15px 47px;
 	color: #e8491d;
 	border-radius: 20px;
@@ -152,15 +153,15 @@ header .header-buttons{
 .tag h1{
 	font-family:'Muller Narrow Light';
 	font-weight:medium;
-	font-size:55px;
-	color: #ffffff;
+	font-size:60px;
+	color: #030580;
 	padding-bottom: 20px;
 }
 .tag p{
 	font-family: Muller Narrow Light;
 	font-weight: medium;
-	font-size: 24px;
-	color: #fff;
+	font-size: 28px;
+	color: #030580;
 	padding-bottom: 30px;
 
 }
@@ -168,7 +169,7 @@ header .header-buttons{
 /*header showcase*/
 
 header #showcase{
-	background: linear-gradient(rgba(29, 38, 113, 0.75), rgba(29, 38, 80, 0.9)), url('../Images/grge.jpg') no-repeat;
+	background: linear-gradient(rgba(29, 38, 113, 0.4), rgba(29, 38, 80, 0.3)), url('../Images/par.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
@@ -188,99 +189,11 @@ section #register{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	min-height: 100vh;
 	
 }
 
 
-/*about us*/
-/*#about-us{
-	height: 100vh;
-	padding:20px;
-	background: grey;
-	padding-left: 30px;
-}
-
-#about-us #who{
-	font-family:'Muller Medium';
-	font-size: 40px;
-	font-weight: bold;
-	padding-top: 50px;
-	text-decoration: underline;
-	text-decoration-style: dotted;
-	text-decoration-color:  black;
-	text-align:left;
-	color: #030580;
-
-}
-
-#about-us h2{
-	font-family: 'Muller Narrow Light';
-	padding-top: 30px;
-	font-weight: normal;
-	color: #030580;
-}
-#about-us p {
-
-	color: #ffffff;
-	padding-bottom: 40px;
-}
-
-article{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-
-}
-article p{
-
-		border-top: 2px solid;
-	border-color: black;
-}
-
-.quoted{
-	font-family: 'Muller Narrow Light';
-	font-weight: normal;
-	width: 50%;
-
-}
-
-.bold{
-	font-size: 50px;
-	color: #fff;
-}
-
-.vision-quote{
-	padding:30px;
-	font-family: 'Muller Narrow Medium';
-	font-weight: medium;
-	color: #fff;
-	background: red;
-	font-size: 34px;
-}
-
-.vision-quote h1{
-	font-size: 40px;
-}
-
- #learn_more_button{
- 	display: flex;
- 	justify-content: center;
-	padding-bottom: 30px;
-	padding-top: 100px;
-	text-align: center;
-}*/
-
-/*@media screen and (max-width: 70px){
-	article{
-		display: flex;
-		align-items: center;
-		
-		flex-flow: column wrap;
-		
-	}
-}*/
-/*end about-us*/
 
 
 
@@ -288,8 +201,11 @@ article p{
 
 
 #registration-form{
+	display: flex;
+	flex: 1 1 auto;
 	width: 50vw;
-	margin:10px auto;
+	height: 100%;
+	margin:60px auto 10px auto;
 	position: relative;
 
 }
@@ -298,6 +214,7 @@ article p{
 
 #registration-form fieldset{
 	width: 80%;
+	flex: 1 1 auto;
 	margin:0 auto;
 	padding:20px 30px;
 	background: #ffffff;
@@ -317,17 +234,25 @@ width: auto;
 margin-right: 15px;
 
 }
+
  #select_options .rbox input[type="radio"]{
  	width: auto;
  	margin-right: 15px;
  	vertical-align: middle;
- 	/*margin-left: 490px;*/
+ 	padding-top: 30px;
 
 	
 }
 
+#registration-form fieldset:nth-child(n){
+	min-height: calc(100vh - 100px);
+}
+
+
+
 #registration-form fieldset:not(:first-of-type){
 	display: none;
+	
 }
 /*form buttons*/
 #registration-form .action-button{
@@ -397,9 +322,12 @@ margin-right: 15px;
 .next{
 	text-align: center;
 	margin-left: 40%;
-		padding: 3px;
-	text-align: center;
+		padding-bottom: 3px;
 	}
+/*second panel*/
+#bank #nextButton{
+	float: right;
+}
 
 .submit{
 	float: right;
@@ -439,7 +367,85 @@ margin-right: 15px;
 }
 
 
+/*physical location*/
+#location{
+	display:flex;
+	width:100%;
+	justify-content: space-between;
+	padding-top: 15px;
+	flex-flow:row wrap;
+	align-items: center;
+	flex-direction: row;
+}
 
+/*#location input{
+	/*width:100%;*/
+	/*height: 20px;*/
+	/*padding:2px;
+}
+*/
+.leftLocation, .rightLocation  {
+width: 50%;
+flex: 1;
+}
+
+
+
+
+
+/*bank details*/
+#bank{
+	display: flex;
+	flex-direction: column;
+}
+/*bank*/
+#bank #bank_details{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-flow:row wrap;
+	width: 100%;
+}
+
+#bank #bank_details input{
+	width: 90%;
+}
+#bank #bank_details .bankacc_name{
+	flex: 1;
+}
+#bank #bank_details .acc_num{
+	flex: 1;
+}
+
+
+/*Doc upload*/
+#bank #fileUpload{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: #030580;
+	padding: 30px 0;
+}
+
+ #bank input[name="file_upload"]{
+	vertical-align: middle;
+	width: auto;
+	margin-right: 15px;
+	padding-bottom: 6px;
+
+
+}
+
+#fileUpload .checkbox{
+	display:inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex: 1;
+	
+}
+/*end of doc upload*/
 /*end registration form*/
 
 /*subscription area*/

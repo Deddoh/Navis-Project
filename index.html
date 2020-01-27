@@ -4,9 +4,20 @@
 <html>
 <head>
 	<title>Navis | Welcome</title>
+	<link rel="preload" href="Images/par.jpg" as="image"> 
 	<script type="text/javascript" src="Js/jquery-3.3.1.min.js"></script>
 	 <link rel="stylesheet" href="Css/floating-wpp.css">
     <script type="text/javascript" src="Js/floating-wpp.js"></script>
+    <script>
+    	$(function(){
+    		$(document).scroll(function(){
+    			var $navscroll = $('.header-buttons');
+    			$navscroll.toggleClass('scrolled', $(this).scrollTop() > $navscroll.height());
+    		});
+    	});
+
+
+    </script>
 	<link rel="icon" href="Images/logo.jpg">
 	<link rel="stylesheet" type="text/css" href="Css/style.css">
 	<!-- font style -->
@@ -52,7 +63,7 @@
 
 			<h1>AI-driven <span class="highlight"> working capital finance</span> for small businesses</h1>
 			<p>Sign up for early access</p>
-			<a href="#register" class="navbar"> Sign up</a>
+			<button id="navbarRegister"> Sign up</button>
 			
 </div>
 		
@@ -62,9 +73,9 @@
 
 <main >
 		
-	<section id="register" class="sec">
+	<!-- <section id="register" class="sec">
 <form id="registration-form" method="POST" action="Js/db.js">
-	<!-- progressbar -->
+	progressbar
 
 	<ul id="progressbar">
 		<li class="active"></li>
@@ -128,7 +139,7 @@
 <input type="submit" name="submit" class="submit action-button" id="submitButton" value="Submit" onclick="" />
 	</fieldset>
 </form>
-	</section>
+	</section>-->
 
 	<section id="newsletter" class="sec">
 		<h1>Subscribe to our newsletter</h1>
@@ -137,7 +148,7 @@
 			<button type="submit" class="subscribe_button">Subscribe to our mailing list</button>
 		</form>
 		
-	</section>
+	</section> 
 
 
 
@@ -163,12 +174,11 @@
 		</div>
 </div>
 		
-	</section>
+	</section> 
 
 
 
 </main>	
-<!-- <a href="https://api.whatsapp.com/send?phone=254740477891&text=urlencodedtext">Send Message</a> -->
   
 
 	<footer>
@@ -220,7 +230,7 @@
   integrity="sha256-UOoxwEUqhp5BSFFwqzyo2Qp4JLmYYPTHB8l+1yhZij8="
   crossorigin="anonymous"></script>
 	<script type="text/javascript" src="Js/scrollable.js"></script>
-	<script type="text/javascript" src="Js/multiStep.js"></script>
+	<!-- <script type="text/javascript" src="Js/multiStep.js"></script> -->
 	<script type="text/javascript" src="Js/main.js"></script>
 <div class="myButton"></div>
 
@@ -243,5 +253,12 @@
             position: 'right'
         });
     });
+</script>
+<!-- register page redirect -->
+<script>
+document.getElementById('navbarRegister').addEventListener('click', (e) =>{
+e.preventDefault();
+window.location.href = 'up.html';
+});
 </script>
 </html>
