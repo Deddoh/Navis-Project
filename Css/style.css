@@ -112,7 +112,7 @@ header .header-buttons{
 
 .header-buttons.scrolled{
 	background-color: #292A80 !important;
-	transition: background-color 200ms linear;
+	transition: background-color 800ms ease-in-out;
 }
 
 /*company logo*/
