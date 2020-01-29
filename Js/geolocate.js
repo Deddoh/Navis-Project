@@ -1,4 +1,5 @@
 var placeSearch, autocomplete;
+autocomplete = document.getElementById('autocomplete');
   var componentForm = {
     street_number: 'short_name',
     street_number_optional: 'short_name',
