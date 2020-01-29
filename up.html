@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navis | Register</title>
+		<link rel="stylesheet" type="text/css" href="Css/style.css">
+	<!-- font style -->
+	<link rel="stylesheet" type="text/css" href="font-muller/fonts.css">
+	<style type="text/css">
+		.header-buttons{
+			background-color: #292A80;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+<header>
+
+	<div class="header-buttons">
+		
+		
+		<nav class="navbar">
+			<ul>
+				<!-- <li><a href="#about-us">about</a></li> -->
+				<li><a href="#register">early access</a></li>
+				<li><a href="#contact">contact</a></li>
+			</ul>
+		</nav>
+
+		<div id="logo-brand">
+				<h1><a href="index.html"> Navis </a></h1>
+			</div>
+		</div>
+
+	</header>
+
+	<!-- main -->
+<main >
+		
+	<section id="register" class="sec">
+
+	<form id="registration-form" method="POST" action="Js/db.js">
+
+<!-- personal info form -->
+
+	<fieldset >
+		<legend> Register </legend>
+		<label>Company Name</label><span class="essential">*</span><br><br>
+			<input type="text" name="name"  placeholder="Enter company name" id="company_name" required> <br><br>
+			<label>Email</label><span class="essential">*</span><br><br>
+			<input type="email" pattern=".+@.+\..+" name="email" placeholder="Enter business email" id="business_email" required ><br><br>
+			<label>Phone</label><span class="essential">*</span><br><br>
+			<input type="tel" name="phone" placeholder=" &nbsp; &nbsp; &nbsp; &nbsp;070 &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp; &nbsp;000&nbsp; &nbsp; &nbsp;- &nbsp; &nbsp; &nbsp;0000" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10" id="phone" required><br><br>
+			<label>Sector <span class="essential">*</span></label><br><br>
+			<select required id="sector">
+				<option value="Agriculture and forestry">Agriculture and forestry</option>
+							<option value="Mining and quarrying">Mining and quarrying</option>
+							 <option value= "Manufacturing">Manufacturing</option>
+							 <option value= "Energy"> Energy</option>
+							   <option value= "Utilities">Utilities</option>
+							   <option value="Construction"> Construction </option>
+							    <option value="Wholesale and retail">Wholesale and retail</option>
+							    <option value= "Transport and storage"> Transport and storage</option>
+							    <option value= "Finance and Insurance"> Finance and Insurance</option>
+							    <option value=  "Real estate"> Real estate</option>
+							     <option value="Professional services"> Professional services</option>
+							      <option value= "Administrative and support services"> Administrative and support services</option>
+							       <option value= "Education" > Education</option>
+							         <option value= "Healthcare"> Healthcare</option>
+							          <option value= "Arts and entertainment"> Arts and entertainment</option>
+			</select><br><br>
+			
+			<label>Physical Location</label><span class="essential">*</span><br><br>
+			<input type="text" name="location_address" id="autocomplete" placeholder="Enter location" onFocus="geolocate()" required><br>
+		<div id="location">
+			<div class="leftLocation">
+				<label>Street address</label><span class="essential">*</span><br>
+				<input type="text" name="street_address" id="street_number" placeholder="Address 1" required><br>
+				<label>Street address_2 (optional)</label><br>
+				<input type="text" name="street_address2" id="street_number_optional" placeholder="Address 2"><br>
+				<label>Zip Code</label><span class="essential">*</span><br>
+				<input type="number" name="zip" id="postal_code" required><br>
+			</div>
+			<div class="rightLocation">
+				<label>City</label><span class="essential">*</span><br>
+				<input type="text" name="city" id="locality" placeholder="Enter city name" required><br>
+				<label>County</label><span class="essential">*</span><br>
+				<input type="text" placeholder="County" name="county" id="county" required><br>
+				<label>State/Country</label><span class="essential">*</span><br>
+				<input type="text" name="country" id="country" required><br>
+			</div>
+	</div>
+			<br>
+			<br>
+
+		<label>Monthly Revenue</label><span class="essential">*</span><br><br>
+		<input type="number" name="revenue" id="monthly_revenue" required>
+		<br><br>
+
+	<input type="submit" name="next" class="next action-button" value="Next" />
+
+</fieldset>
+<!-- end of personal info form -->
+
+<!-- Bank details -->
+
+<fieldset id="bank">
+	<legend>Register</legend>
+
+<h2>Bank Details</h2>
+<div id="bank_details">
+	<div class="bankacc_name">
+		<label>Bank Name</label><span class="essential">*</span><br>
+		<input type="text" name="bankName" placeholder="Enter bank name" required><br>
+		<label>Branch Name</label><span class="essential">*</span><br>
+		<input type="text" name="branchName" placeholder="Enter branch name" required><br>
+	</div>
+	<div class="acc_num">
+		<label>Account Name</label><span class="essential">*</span><br>
+		<input type="text" name="accName" placeholder="Enter account name" reqiured><br>
+		<label>Account Number</label><span class="essential">*</span><br>
+		<input type="number" name="accNumber" placeholder="Enter account number" required><br>
+
+	</div>
+</div>
+<br><br>
+
+
+<label>KRA PIN</label><span class="essential">*</span><br><br>
+<input type="text" name="kra_pin" placeholder="Enter PIN" required><br><br>
+
+
+<!-- Document upload area -->
+<h2>Document upload</h2>
+<p>file size 1-100mb max</p>
+<div  id="fileUpload">
+	<div class="checkbox">
+	<div>
+	<input type="checkbox" name="file_upload" id="reg_certificate">Company Registration Certificate
+	<br>
+	
+	<input type="checkbox" name="file_upload" id="kra"> KRA PIN Certificate
+	<br>
+	
+	<input type="checkbox" name="file_upload" id="tax"> Tax Compliance Certificate
+		<br>
+	
+	<input type="checkbox" name="file_upload" id="cr12"> CR12
+	<br>
+</div>
+<div>
+	<input type="file" name="file" value="Choose file"><br>
+	<input type="file" name="file" value="Choose file"><br>
+	<input type="file" name="file" value="Choose file"><br>
+	<input type="file" name="file" value="Choose file"><br>
+</div>
+</div>
+</div>
+
+	<input type="button" name="previous" class="previous action-button" value="Previous" />
+<input type="submit" name="next" class="next action-button" id="nextButton" value="Next" />
+
+</fieldset>
+
+
+
+
+
+
+<!-- end of bank details -->
+
+
+<!-- preferences form -->
+	<fieldset id="preferences">
+		<legend> Register </legend>
+		<h2>How do you <span class="highlight"> track </span>business expenses?</h2>
+		<div  id="select_options">
+			<div class="cbox">
+		<input type="checkbox" name="track" id="box1"> Excel<br>
+		<input type="checkbox" name="track" id="box2">Written records<br>
+		<input type="checkbox" name="track" id="box3"> QuickBooks<br>
+		<input type="checkbox" name="track" id="box4">Sage<br>
+		<input type="checkbox" name="track" id="box5">SAP<br>
+		<input type="checkbox" name="track" id="box6">Other ERP software<br>
+</div><br>
+<div class="rbox">
+		<h2>Would you like to participate in <span class="highlight">early access</span>?</h2>
+		<input type="radio" name="early-access" value="yes" checked> YES
+		<br>
+		<input type="radio" name="early-access" value="no"> NO
+			<br><br>
+		</div>
+	</div>
+
+
+			<input type="button" name="previous" class="previous action-button" value="Previous" />
+			<input type="submit" name="submit" class="submit action-button" id="submitButton" value="Submit" onclick="" />
+
+
+</fieldset>
+</form>
+</section>
+</main>
+
+
+
+
+
+
+
+
+
+		<footer>
+		<div >
+			<p> Navis &nbsp; &nbsp; &nbsp; Copyright &copy; &nbsp; &nbsp; &nbsp; 2020</p>
+
+		</div>
+		<div class="scroll-to-top">
+			<a href="#top">Scroll Top </a>
+		</div>
+		
+	</footer>
+
+</body>
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC_bBlnZT4qy1QonXpZTTyrnbSo3aiagFU",
+    authDomain: "navis-4b50f.firebaseapp.com",
+    databaseURL: "https://navis-4b50f.firebaseio.com",
+    projectId: "navis-4b50f",
+    storageBucket: "navis-4b50f.appspot.com",
+    messagingSenderId: "385737457607",
+    appId: "1:385737457607:web:52d4b06d187a248019a3e2",
+    measurementId: "G-2X3GW0X7PV"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="Js/db.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> -->
+
+<script
+  src="https://code.jquery.com/ui/1.8.24/jquery-ui.min.js"
+  integrity="sha256-UOoxwEUqhp5BSFFwqzyo2Qp4JLmYYPTHB8l+1yhZij8="
+  crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="Js/scrollable.js"></script>
+	<script type="text/javascript" src="Js/multiStep.js"></script>
+	<script type="text/javascript" src="Js/main.js"></script>
+	<script type="text/javascript" src="Js/geolocate.js"></script>
+	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&libraries=places&callback=initAutocomplete" async defer></script>
+</html>
