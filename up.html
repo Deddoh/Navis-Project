@@ -15,10 +15,12 @@
 <body>
 <header>
 
-	<div class="header-buttons">
+	<div class="header-buttons" id="navHeader">
 		
-		
-		<nav class="navbar">
+		<div id="logo-brand" >
+				<h1><a href="index.html"> Navis </a></h1>
+			</div>
+		<nav>
 			<ul>
 				<!-- <li><a href="#about-us">about</a></li> -->
 				<li><a href="#register">early access</a></li>
@@ -26,9 +28,7 @@
 			</ul>
 		</nav>
 
-		<div id="logo-brand">
-				<h1><a href="index.html"> Navis </a></h1>
-			</div>
+		
 		</div>
 
 	</header>
@@ -72,22 +72,17 @@
 			<label>Physical Location</label><span class="essential">*</span><br><br>
 			<input type="text" name="location_address" id="autocomplete" placeholder="Enter location" onFocus="geolocate()" required><br>
 		<div id="location">
-			<div class="leftLocation">
-				<label>Street address</label><span class="essential">*</span><br>
-				<input type="text" name="street_address" id="street_number" placeholder="Address 1" required><br>
-				<label>Street address_2 (optional)</label><br>
-				<input type="text" name="street_address2" id="street_number_optional" placeholder="Address 2"><br>
+			<div class="autoPopulateFields">
+				<label>City</label><span class="essential">*</span><br>
+				<input type="text" name="city" id="locality" placeholder="Enter city name" required><br>
+				<!-- <label>County</label><span class="essential">*</span><br>
+				<input type="text" placeholder="County" name="county" id="county" required><br> -->
+				<label>State/Country</label><span class="essential">*</span><br>
+				<input type="text" name="country" id="country" required><br>
 				<label>Zip Code</label><span class="essential">*</span><br>
 				<input type="number" name="zip" id="postal_code" required><br>
 			</div>
-			<div class="rightLocation">
-				<label>City</label><span class="essential">*</span><br>
-				<input type="text" name="city" id="locality" placeholder="Enter city name" required><br>
-				<label>County</label><span class="essential">*</span><br>
-				<input type="text" placeholder="County" name="county" id="county" required><br>
-				<label>State/Country</label><span class="essential">*</span><br>
-				<input type="text" name="country" id="country" required><br>
-			</div>
+			
 	</div>
 			<br>
 			<br>
@@ -101,72 +96,8 @@
 </fieldset>
 <!-- end of personal info form -->
 
-<!-- Bank details -->
-
-<fieldset id="bank">
-	<legend>Register</legend>
-
-<h2>Bank Details</h2>
-<div id="bank_details">
-	<div class="bankacc_name">
-		<label>Bank Name</label><span class="essential">*</span><br>
-		<input type="text" name="bankName" placeholder="Enter bank name" required><br>
-		<label>Branch Name</label><span class="essential">*</span><br>
-		<input type="text" name="branchName" placeholder="Enter branch name" required><br>
-	</div>
-	<div class="acc_num">
-		<label>Account Name</label><span class="essential">*</span><br>
-		<input type="text" name="accName" placeholder="Enter account name" reqiured><br>
-		<label>Account Number</label><span class="essential">*</span><br>
-		<input type="number" name="accNumber" placeholder="Enter account number" required><br>
-
-	</div>
-</div>
-<br><br>
 
 
-<label>KRA PIN</label><span class="essential">*</span><br><br>
-<input type="text" name="kra_pin" placeholder="Enter PIN" required><br><br>
-
-
-<!-- Document upload area -->
-<h2>Document upload</h2>
-<p>file size 1-100mb max</p>
-<div  id="fileUpload">
-	<div class="checkbox">
-	<div>
-	<input type="checkbox" name="file_upload" id="reg_certificate">Company Registration Certificate
-	<br>
-	
-	<input type="checkbox" name="file_upload" id="kra"> KRA PIN Certificate
-	<br>
-	
-	<input type="checkbox" name="file_upload" id="tax"> Tax Compliance Certificate
-		<br>
-	
-	<input type="checkbox" name="file_upload" id="cr12"> CR12
-	<br>
-</div>
-<div>
-	<input type="file" name="file" value="Choose file"><br>
-	<input type="file" name="file" value="Choose file"><br>
-	<input type="file" name="file" value="Choose file"><br>
-	<input type="file" name="file" value="Choose file"><br>
-</div>
-</div>
-</div>
-
-	<input type="button" name="previous" class="previous action-button" value="Previous" />
-<input type="submit" name="next" class="next action-button" id="nextButton" value="Next" />
-
-</fieldset>
-
-
-
-
-
-
-<!-- end of bank details -->
 
 
 <!-- preferences form -->
@@ -192,11 +123,129 @@
 	</div>
 
 
-			<input type="button" name="previous" class="previous action-button" value="Previous" />
-			<input type="submit" name="submit" class="submit action-button" id="submitButton" value="Submit" onclick="" />
+				<input type="button" name="previous" class="previous action-button" value="Previous" />
+<input type="submit" name="next" class="next action-button" id="nextButton" value="Next" />
+			
 
 
 </fieldset>
+<!-- end of preferences form -->
+
+
+
+
+
+
+<!-- Bank details form -->
+
+<fieldset id="bank">
+	<legend>Register</legend>
+
+<h2>Bank Details</h2>
+<div id="bank_details">
+	<div class="bankacc_name">
+		<label>Bank Name</label><span class="essential">*</span><br>
+		<select id="bankName">
+			<option value="VICMKENA">Victoria Commercial Bank Kenya</option>
+			<option value="TNBLKENA">Transnational Bank Kenya</option>
+			<option value="SOCRKENA">Standard Chartered Bank Kenya</option>
+			<option value="PRIEKENX">Prime Bank Kenya</option>
+			<option value="DELFKENA">M Oriental Bank Kenya</option>
+			<option value="PAUTKENA">Paramount Universal Bank Kenya</option>
+			<option value="NINCKENA">NIC Bank Kenya</option>
+			<option value="NBKEKEN">National Bank of Kenya</option>
+			<option value="MIEKKENA">Middle East Bank Kenya</option>
+			<option value="KREPKENA">Sidian Bank Kenya</option>
+			<option value="KCBLKENX">Kenya Commercial Bank KCB</option>
+			<option value="IMBLKENA">I&M Bank Kenya</option>
+			<option value="HBZUKENA">Habib Bank AG Zurich Kenya</option>
+			<option value="GAFRKENA">Gulf African Bank Kenya</option>
+			<option value="GUARKENA">Guardian Bank Kenya</option>
+			<option value="IFCBKENA">First Community Bank Kenya</option>
+			<option value="FBAKKENA">Guaranty Trust GT Bank Kenya</option>
+			<option value="FCBLKENA">SBM Bank Kenya</option>
+			<option value="FABLKENA">Family Bank Kenya</option>
+			<option value="EQBLKENA">Equity Bank Kenya</option>
+			<option value="EQUAKENA">Spire Bank Kenya</option>
+			<option value="ECOCKENA">Ecobank Kenya</option>
+			<option value="ESATKENA">Trade and Development Bank </option>
+			<option value="DTKEKENA">Diamond Trust Bank DTB Kenya</option>
+			<option value="DEVKKENA">Development Bank of Kenya</option>
+			<option value="CRBTKENA">Credit Bank Kenya</option>
+			<option value="KCOOKENA">Cooperative Bank of Kenya</option>
+			<option value="CONKKENA">Consolidated Bank of Kenya</option>
+			<option value="CBAFKENX">Commercial Bank of Africa CBA</option>
+			<option value="CIFIKENA">Jamii Bora Bank</option>
+			<option value="CITIKENA">City Bank Kenya</option>
+			<option value="CKENKENA">Chase Bank Kenya</option>
+			<option value="SBICKENX">CFC Stanbic Bank Kenya</option>
+			<option value="CBKEKENX">Central Bank of Kenya</option>
+			<option value="BARCKENX">Barclays Bank Kenya</option>
+			<option value="BARBKENA">Bank of Baroda</option>
+			<option value="AFRIKENX">Bank of Africa Kenya</option>
+			<option value="ABCLKENA">ABC Bank Kenya</option>
+			<option value="MYBKKENA">Mayfair Bank Kenya</option>
+			<option value="UNAFKENA">United Bank of Africa UBA</option>
+			<option value="BKIDKENA">Bank of India Kenya</option>
+
+		</select>
+	
+		<label>Account Name</label><span class="essential">*</span><br>
+		<input type="text" name="accName" placeholder="Enter account name" reqiured><br>
+		<label>Account Number</label><span class="essential">*</span><br>
+		<input type="number" name="accNumber" placeholder="Enter account number" required><br>
+
+	</div>
+</div>
+<br><br>
+
+
+<label>KRA PIN</label><span class="essential">*</span><br><br>
+<input type="text" name="kra_pin" placeholder="Enter PIN" required><br><br>
+
+
+<!-- Document upload area -->
+<h2>Document upload</h2>
+<p>file size 1-100mb max</p>
+
+<div id="fileUpload" >
+<div class="fileType">
+	<p name="file_upload" id="reg_certificate">Company Registration Certificate <span class="essential">*</span></p>
+
+	
+	<p name="file_upload" id="kra"> KRA PIN Certificate <span class="essential">*</span></p>
+	
+	
+	<p name="file_upload" id="tax"> Tax Compliance Certificate <span class="essential">*</span></p>
+	
+	<p name="file_upload" id="cr12"> CR12 <span class="essential">*</span></p>
+	
+</div>
+<div class="fileButton">
+	<input type="file" name="file" value="Choose file" accept=".jpeg, .jpg, .png, .pdf, .docx, .doc" required><br>
+	<input type="file" name="file" value="Choose file" accept=".jpeg, .jpg, .png, .pdf, .docx, .doc" required><br>
+	<input type="file" name="file" value="Choose file" accept=".jpeg, .jpg, .png, .pdf, .docx, .doc" required><br>
+	<input type="file" name="file" value="Choose file" accept=".jpeg, .jpg, .png, .pdf, .docx, .doc" required><br>
+</div>
+</div>
+
+
+
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+<input type="submit" name="submit" class="submit action-button" id="submitButton" value="Submit" onclick="" />
+
+
+</fieldset>
+
+
+
+
+
+
+<!-- end of bank details -->
+
+
+
 </form>
 </section>
 </main>

@@ -10,6 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="https://kit.fontawesome.com/fontawesome.css">
 	<script src="https://kit.fontawesome.com/98ec3ee8d0.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script type="text/javascript" src="Js/barChart.js"></script>
+
 	
 </head>
 <body>
@@ -18,7 +21,7 @@
 	<main>
 <section id="user">
 	<div>
-		<h2>Account Receivable</h2>
+		<h2>Hi, &nbsp; <span class="userName">Company_A</span></h2>
 	</div>
 	<div>
 		<i class="fa fa-user"></i>
@@ -26,18 +29,18 @@
 </section>
 
 		<section id="charts">
-			<div id="invoice_chart" class="chart">
+			<svg  class="bar-chart">
 				
 
-			</div>
-			<div id="clients_chart" class="chart">
+			</svg>
+			<!-- <svg id="clients_chart" class="chart">
 
 
-			</div>
-			<div id="finance_chart" class="chart">
+			</svg>
+			<svg id="finance_chart" class="chart">
 
 
-			</div>
+			</svg> -->
 
 
 
@@ -497,10 +500,13 @@
 			$(".confirmActionButtonsTitle").show();
 		}
 //else if more than one checkbox is checked, hide the action bar on the right, and display it at the bottom
-		else if($("#financeTable input:checkbox:checked").length > 1 && $(".confirmMultipleDivButtons").css("display", "none")){
+		else if($("#financeTable input:checkbox:checked").length > 1){
 			$(".confirmMultipleDivButtons").css("display","flex");
 			$(".confirmMultipleDivButtons").show();			
-			$(".confirmMultipleDivButtons").css("padding-left","45%");
+			// $(".confirmMultipleDivButtons").css("padding-left","45%");
+			$(".confirmMultipleDivButtons").css("justify-content","center");
+			$(".confirmMultipleDivButtons").css("align-items","center");
+
 			$(".confirmMultipleDivButtons").css("padding-top","23%");
 			$(".confirmMultipleDivButtons").css("position","fixed");
 			$(this).parents("tr:eq(0)").find(".confirmButtons").css("display","none");
