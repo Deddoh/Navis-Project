@@ -147,11 +147,17 @@ li{
 	flex-direction: row;
 	justify-content: space-around;
 	margin:10px 0 10px 15px;
-	width: calc(100vw - 100px);
+	/*width: calc(100vw - 100px);*/
+	width: 93vw;
 	box-sizing: border-box;
 	box-shadow:   0 0 15px 1px rgba(0, 0, 0, 0.15);
 }
 
+#performance a{
+	text-decoration:none;
+	color: #000;
+	cursor: pointer;
+}
 .performanceContainer .count, .fas{
 	font-size: 44px;
 }
@@ -214,7 +220,7 @@ tr td{
 
 /*bank table*/
 #payment02{
-width: 60vw;
+width: 93vw;
 	margin: 10px auto;
 	/*border-top: 0;
 	border-bottom: 0;
@@ -226,6 +232,8 @@ width: 60vw;
 	border-collapse: collapse;
 	box-shadow:  0 0 15px 1px rgba(0, 0, 0, 0.15);
 }
+
+
 
 /*footer*/
 footer{
