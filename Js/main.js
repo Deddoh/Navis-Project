@@ -16,6 +16,7 @@ if(document.getElementById('financeTable').style.display === "table" || document
 	document.getElementById('invoiceTable').style.display = "table";
 	document.getElementById('clientsTable').style.display = "none";
 	document.getElementById('financeTable').style.display = "none";
+	// document.getElementById('#filter01').style.display = "inline";
 }
 else{
 	document.getElementById('invoiceTable').style.display = "table";
@@ -24,10 +25,12 @@ else{
 
 clientsBtn.addEventListener('click', functionDisplayClients);
 function functionDisplayClients(){
+	this.setAttribute('background', 'red');
 if(document.getElementById('invoiceTable').style.display === "table" || document.getElementById('financeTable').style.display === "table"){
 	document.getElementById('invoiceTable').style.display = "none";
 	document.getElementById('clientsTable').style.display = "table";
 	document.getElementById('financeTable').style.display = "none";
+	
 }
 else{
 	document.getElementById('clientsTable').style.display = "table";
@@ -41,6 +44,8 @@ if(document.getElementById('clientsTable').style.display === "table" || document
 	document.getElementById('invoiceTable').style.display = "none";
 	document.getElementById('clientsTable').style.display = "none";
 	document.getElementById('financeTable').style.display = "table";
+// document.getElementById('#filter03').style.display = "inline";
+
 	
 }
 else{
@@ -54,7 +59,7 @@ else{
 
 // checkbox status
 
-// var checkbox = document.querySelector('confirm');
+// var checkbox = document.querySelector('.confirm');
 
 // checkbox.addEventListener('change', functionDisplayButton);
 // 	function functionDisplayButton(){
@@ -63,7 +68,7 @@ else{
 
 // 		}
 // 		else{
-// 			document.querySelectorAll('#confirmButtons').style.display = "none";
+// 			document.querySelector('.confirmButtons').style.display = "none";
 // 		}
 // 	}
 

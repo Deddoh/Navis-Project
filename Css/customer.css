@@ -12,7 +12,7 @@ body{
 	font-size: 20px;
 	font-family: 'Muller Narrow Light';
 	font-weight: normal;
-	color: #ffffff;
+	color: #000;
 	margin: 0;
 }
 
@@ -95,7 +95,7 @@ main{
 }
 
 .buttons button:hover{
-	background: green;
+	background: #0d31a6;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 }
 /*section to display tables*/
@@ -119,10 +119,19 @@ table{
 	border-left: 0;
 
 }
+
+
+#data_tables .filter{
+	font-size: 23px;
+	padding-left: 100px;
+}
  #clientsTable, #financeTable{
 	display: none;
 }
 
+#display02 .filter, #display03 .filter{
+	display: none;
+}
  #invoiceTable{
  	display: table;
  }
@@ -144,23 +153,35 @@ tr td{
 	color: #000000;
 	background: #fff;
 }
-
+.confirm{
+	display: none;
+}
 .confirmButtons, .confirmActionButtonsTitle{
 	display: none;
 	background: yellow;
+}
+#filter03{
+	flex: 1;
+}
+#financeTable{
+	flex: 1;
 }
 .confirmMultipleDivButtons{
 	display:none;
 	padding-bottom: 15px;
 	margin: 0 auto; 
-	background: #f1f1f1;
-	
+	position: fixed;
+	flex: 1;
+	float: right;
 
 }
+
 #display03{
 	display: flex;
 	flex-direction: column;
+	flex: 1 1 auto;
 	justify-content: center;
+	color: #000;
 }
 
 .agreeFinanceStatus{
@@ -194,6 +215,25 @@ tr td{
 	
 }
 
+
+
+/*status section*/
+.financed{
+	background: #0c8721;
+}
+.collection-complete{
+background: #054d11;
+}
+ .pending{
+background: #967309;
+ }
+
+ .not-financed{
+background: red;
+ }
+ .collection-in-progress{
+background: #c9aa67;
+ }
 /*end of main section*/
 
 
