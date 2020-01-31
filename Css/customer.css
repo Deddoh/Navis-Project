@@ -8,7 +8,7 @@ html, body{
 body{
 	display: flex;
 	flex-direction: column;
-	background: #ccc;
+	background: #f1f1f1;
 	font-size: 20px;
 	font-family: 'Muller Narrow Light';
 	font-weight: normal;
@@ -35,12 +35,15 @@ main{
 #user{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	background-color: #fff;
 	color: blue;
-	flex: 1 0 50px;
+	flex: 1 0 30px;
 	box-sizing: border-box;
 	box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
-
+}
+#user h2, i{
+	padding:0 30px;
 }
 
 /*d3js charts*/
@@ -53,13 +56,13 @@ main{
 	box-sizing: border-box;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 	flex: 0 0 350px;
-	margin-top: 20px;
+	margin: 20px 5px 0 5px;
 }
 
 .chart{
 	margin: 3px;
 	flex: 1;
-	background-color: #f1f1f1;
+	/*background-color: yellow;*/
 }
 
 /*table buttons*/
@@ -68,6 +71,7 @@ main{
 	flex:1 1 auto;
 	flex-direction: column;
 	margin-top: 20px;
+	background: #f1f1f1;
 }
 
 #data_tables .buttons{
@@ -119,6 +123,10 @@ table{
 	display: none;
 }
 
+ #invoiceTable{
+ 	display: table;
+ }
+
 
 .hidden{
 	display: none;
@@ -145,7 +153,7 @@ tr td{
 	display:none;
 	padding-bottom: 15px;
 	margin: 0 auto; 
-
+	background: #f1f1f1;
 	
 
 }
