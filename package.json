@@ -1,0 +1,24 @@
+{
+  "name": "navis-project",
+  "version": "1.0.0",
+  "description": "AI-driven working capital finance for small businesses ",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deddoh/Navis-Project.git"
+  },
+  "keywords": [
+    "working",
+    "capital",
+    "finance"
+  ],
+  "author": "Dedan Njoroge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deddoh/Navis-Project/issues"
+  },
+  "homepage": "https://github.com/Deddoh/Navis-Project#readme"
+}
