@@ -32,22 +32,25 @@ main{
 }
 
 
+/*user header field*/
 #user{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #fff;
 	color: blue;
-	flex: 1 0 30px;
+	flex: 1 0 20px;
 	box-sizing: border-box;
 	box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
 }
 #user h2, i{
 	padding:0 30px;
 }
+/*end of user header field*/
+
 
 /*d3js charts*/
-
+/*section to hold the charts*/
 #charts{
 	display: flex;
 	flex-direction: row;
@@ -55,17 +58,18 @@ main{
 	background-color: #fff;
 	box-sizing: border-box;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-	flex: 0 0 350px;
-	margin: 20px 5px 0 5px;
+	flex: 1 1 auto;
+	margin: 20px 1px 0 1px;
 }
+
+/*individual charts*/
 
 .chart{
-	margin: 3px;
-	flex: 1;
-	/*background-color: yellow;*/
+	/*give each element equal space within the display section*/
+	flex: 1; 
 }
 
-/*table buttons*/
+/*data_tables section containing the three tables*/
 #data_tables{
 	display: flex;
 	flex:1 1 auto;
@@ -74,6 +78,8 @@ main{
 	background: #f1f1f1;
 }
 
+
+/*table buttons*/
 #data_tables .buttons{
 	flex: 0 1 70px;
 	/*background: #fff;*/
@@ -98,8 +104,38 @@ main{
 	background: #0d31a6;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 }
+
+/*end of table buttons*/
+
+
+
 /*section to display tables*/
 
+/*filters common style*/
+#display01 .filter{
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	box-shadow: 0 0 15px 1px rgba(0 0 0 0.4);
+	box-sizing: border-box;
+	padding: 4px;
+	width: 90vw;
+	margin:0 auto;
+	text-align: center;
+}
+
+/*#data_tables .filter{
+	font-size: 23px;
+	padding-left: 100px;
+}
+*/
+#display02 .filter, #display03 .filter{
+	display: none;
+}
+
+
+
+/*div holding the three tables;*/
 #table_display{
 	width: 100%;
 }
@@ -107,7 +143,7 @@ main{
 
 
 
-/*new table layout*/
+/*general table layout*/
 table{
 	border-collapse:collapse;
 	margin: 5px auto;
@@ -121,20 +157,14 @@ table{
 }
 
 
-#data_tables .filter{
-	font-size: 23px;
-	padding-left: 100px;
-}
- #clientsTable, #financeTable{
+
+/* #invoiceTable{
+ 	display: table;
+ }*/
+  #clientsTable, #financeTable, #invoiceTable{
 	display: none;
 }
 
-#display02 .filter, #display03 .filter{
-	display: none;
-}
- #invoiceTable{
- 	display: table;
- }
 
 
 .hidden{

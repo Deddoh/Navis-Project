@@ -2,6 +2,10 @@
 <html>
 <head>
 	<title>Navis | User</title>
+	<script type="text/javascript" src="D3/d3.js"></script>
+   <script type="text/javascript" src="D3/d3.min.js"></script>
+   <script type="text/javascript" src="https://d3js.org/d3.v4.js"></script>
+   <!-- <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script> -->
 
 	<link rel="stylesheet" type="text/css" href="Css/customer.css">
 	<!-- font style -->
@@ -10,12 +14,16 @@
 		<link rel="stylesheet" type="text/css" href="https://kit.fontawesome.com/fontawesome.css">
 	<script src="https://kit.fontawesome.com/98ec3ee8d0.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script type="text/javascript" src="Js/barChart.js"></script>
+
+	<!-- Multiselect CSS /Js lib for the filters-->
+	<link rel="stylesheet" type="text/css" href="Css/filter.css">
+	<script type="text/javascript" src="Js/filter.js"></script>
+
+	
 
 	
 </head>
-<body>
+<body onload="invoiceTableByDefault()">
 
 
 	<main>
@@ -28,44 +36,69 @@
 	</div>
 </section>
 
+
+<!-- Section to display the visualization charts -->
+
 		<section id="charts">
-			<svg  class="bar-chart">
-				
+			<!-- bar chart rendering -->
+			<svg  id="bar-chart">
+			</svg>
+			<!-- clients pie chart rendering -->
+			<svg id="clients-chart" class="chart" >
+			</svg>
+			<!-- finance bar charts -->
+			<svg id="finance-chart" class="chart">
+
 
 			</svg>
-			<!-- <svg id="clients_chart" class="chart">
-
-
-			</svg>
-			<svg id="finance_chart" class="chart">
-
-
-			</svg> -->
-
-
-
-
-
 
 		</section>
 
+<!-- end of visualization charts -->
+
+<!-- tables section -->
 		<section id="data_tables">
 			
-				<div class="buttons">
+
+<!-- Buttons declaration -->
+
+	<div class="buttons">
 			<button type="button" id="invoice" >Invoice</button>
 			<button type="button" id="clients" >Clients</button>
 			<button type="button" id="finance" >Finance</button>
-		</div>
+</div>
 
-			<div id="table_display"> 
+<div id="table_display"> 
 
-				<!-- invoice table -->
-				<div  id="display01">
-					<div class="filter" id="filter01">
-					<label>Filter by:</label>&nbsp; &nbsp;
-					<input type="checkbox" name="filterStatus">Clients &nbsp; &nbsp;
-					<input type="checkbox" name="filterStatus">DaysOutstanding
-				</div>
+	<!-- invoice table -->
+		<div  id="display01">
+
+			<!-- filters for the first table -->
+			<div class="filter" id="filter01">
+				<label>Filter</label>&nbsp; &nbsp;
+					
+					<!-- Clients filter option -->
+				<select multiple="multiple" name="clients_f[]" class="clientsFilter active" id="clients_filter">
+						<option value="CustomerA">CustomerA</option>
+				        <option value="CustomerB"> CustomerB</option>
+				        <option value="CustomerC">CustomerC</option>
+				        <option value="CustomerD">CustomerD</option>
+				        <option value="CustomerE">CustomerE</option>
+				        <option value="CustomerF">CustomerF</option>
+				        <option value="CustomerG">CustomerG</option>
+				        <option value="CustomerH">CustomerH</option>
+				</select>
+				&nbsp; &nbsp;
+					<!-- days outstanding filter -->
+				<select multiple="multiple" name="days_f" class="daysFilter active" id="days_filter">
+					<option value="current">Current</option>
+					<option value="30">0-30</option>
+					<option value="60">31-60</option>
+					<option value="90">61-90</option>
+					<option value="over">over 90</option>
+				</select>
+
+</div>
 				<table  id="invoiceTable" cellpadding="1" cellspacing="0" border="1" >
 					<thead class="head">
 						<th>Number</th>
@@ -507,7 +540,7 @@
 
 
 	<footer>
-		<p><img src="Images/logo.jpg" class="logo"> Navis Copyright &copy; 2020</p>
+		<p> Navis Copyright &copy; 2020</p>
 
 	</footer>
 
@@ -515,6 +548,7 @@
 	<script src="Js/main.js"></script>
 
 </body>
+<script type="text/javascript" src="D3/barChart.js"></script>
 
 <!-- finance toggle buttons -->
 <script>
@@ -588,6 +622,41 @@ else if($("#financeTable input:checkbox:checked").length >= 2){
 	$(".agreeFinanceStatus").click(function(){
 		window.location.replace("totalFinance.html", '_blank');
 	});
+
+//filter for clients
+				 $(function () {
+					$('select[multiple].active.clientsFilter').multiselect({
+					 columns: 2,
+					 placeholder: 'Filter by Clients',
+					 search: true,
+					 searchOptions: {
+					 'default': 'Search Clients'
+				 },
+				 selectAll: true
+			});
+
+		 });
+
+// end of clients' filter function
+
+//days outstanding filter
+
+			$(function(){
+				$('select[multiple].active.daysFilter').multiselect({
+					columns:1,
+					placeholder: 'Filter by Days Outstanding',
+					search: true,
+					searchOptions: {
+						'default': 'Search Period'
+					},
+					selectAll: true
+				});
+			});
+
+
+
+
+
 
 </script>
 </html>
