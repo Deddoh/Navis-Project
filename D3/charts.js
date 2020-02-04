@@ -252,3 +252,13 @@ svgFinance.append("g")
 
 
 
+=======
+var dataset = [1,2,3,4,5];
+
+   d3.select('body')
+   .selectAll('p')
+   .data(dataset)
+   .enter()
+   .append('p')
+   .text(function(d){return d});
+>>>>>>> def1fc12837002f74c44a775a8a5ba656c50de59
