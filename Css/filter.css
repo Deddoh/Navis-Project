@@ -28,7 +28,7 @@
 .ms-options-wrap > button[disabled] {
     background-color: #e5e9ed;
     color: #808080;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .ms-options-wrap > button:after {
@@ -141,9 +141,11 @@
 /*selection checkboxes*/
 .ms-options-wrap > .ms-options > ul input[type="checkbox"] {
     margin-right: 5px;
+
     vertical-align: middle;
     position: relative;
     width: auto;
+    
 }
 
 .ms-options-wrap > .ms-options.hide-checkbox > ul input[type="checkbox"] {

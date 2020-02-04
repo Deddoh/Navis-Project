@@ -76,7 +76,7 @@ svgInvoice.append("g")
 // height = 400 - margin.top - margin.bottom;
 
 var h = 400;
-var w = 500;
+var w = 460;
 var margin = 40;
 // radius
 var radius = Math.min(width, height) / 2 + margin;
