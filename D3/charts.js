@@ -250,6 +250,93 @@ svgFinance.append("text")
 // END OF DEFAULT CHARTS
 
 
+// INVOICE MAIN CHART
+// Invoice Bar Chart
+//dimensions and margins of the graph
+var margin = {top:20, right:50, bottom:40, left:140},
+width = 460 - margin.left - margin.right,
+height = 400 - margin.top - margin.bottom;
+
+//append svg object to the body
+
+var svgMainInvoice = d3.select("#invoice-main-chart")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+//add csv containing the data
+d3.csv("invoiceData.csv", function(data){
+
+
+
+//x axis
+
+var x = d3.scaleLinear()
+.domain([0, 16000])
+//round to the nearest whole number
+.rangeRound([0, width])
+svgMainInvoice.append("g")
+
+.attr("transform", "translate(0, " + height + ")")
+.call(d3.axisBottom(x))
+.selectAll("text")
+.attr("transform", "translate(-10, 0)rotate(-45)")
+.style("text-anchor", "end");
+
+
+
+//Y axis
+
+var y = d3.scaleBand()
+.range([0, height])
+.domain(data.map(function(d){ return d.daysOutstanding;}))
+.padding(.4);
+svgMainInvoice.append("g")
+.call(d3.axisLeft(y))
+
+//Rectangular bars
+
+.selectAll("rect")
+.data(data)
+.enter()
+.append("rect")
+.attr("x", x(0))
+.attr("y", function(d){return y(d.daysOutstanding);})
+.attr("width", function(d){return  x(d.invoiceValues);})
+
+
+.attr("height", y.bandwidth())
+.attr("fill", "blue")
+.on("mouseover", placeholder);
+
+// event listener
+var placeholder = ()=>{
+  y.style("fill", "green")
+ svgMainInvoice.selectAll("text")
+   .data(data)
+   .enter()
+   .append("text")
+   .attr("x", x(0))
+    .attr("y", function(d) { return y(d.daysOutstanding) ; })
+  // .attr("dx", ".75em")
+  .text("width", function(d) { return x(d.invoiceValues); });
+
+}
+});
+
+
+
+
+// END OF INVOICE CHART
+
+
+
+
+
+
+
+
 // CLIENTS MAIN CHARTS
 
 // clients' pie chart
@@ -347,24 +434,24 @@ height = 400 - margin.top - margin.bottom;
 
 //append svg object to the body
 
-var svgMainInvoice = d3.select("#finance-main-chart")
+var svgMainFinance = d3.select("#finance-main-chart")
 .attr("width", width + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
 .append("g")
 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 //add csv containing the data
-d3.csv("invoiceData.csv", function(data){
+d3.csv("financeData.csv", function(data){
 
 
 
 //x axis
 
 var x = d3.scaleLinear()
-.domain([0, 16000])
+.domain([0, 760000])
 //round to the nearest whole number
 .rangeRound([0, width])
-svgMainInvoice.append("g")
+svgMainFinance.append("g")
 
 .attr("transform", "translate(0, " + height + ")")
 .call(d3.axisBottom(x))
@@ -378,9 +465,9 @@ svgMainInvoice.append("g")
 
 var y = d3.scaleBand()
 .range([0, height])
-.domain(data.map(function(d){ return d.daysOutstanding;}))
-.padding(.4);
-svgMainInvoice.append("g")
+.domain(data.map(function(d){ return d.collection;}))
+.padding(.5);
+svgMainFinance.append("g")
 .call(d3.axisLeft(y))
 
 //Rectangular bars
@@ -390,8 +477,8 @@ svgMainInvoice.append("g")
 .enter()
 .append("rect")
 .attr("x", x(0))
-.attr("y", function(d){return y(d.daysOutstanding);})
-.attr("width", function(d){return  x(d.invoiceValues);})
+.attr("y", function(d){return y(d.collection);})
+.attr("width", function(d){return  x(d.amountInKes);})
 
 
 .attr("height", y.bandwidth())
@@ -401,19 +488,19 @@ svgMainInvoice.append("g")
 // event listener
 var placeholder = ()=>{
   y.style("fill", "green")
- svgMainInvoice.selectAll("text")
+ svgMainFinance.selectAll("text")
    .data(data)
    .enter()
    .append("text")
    .attr("x", x(0))
-    .attr("y", function(d) { return y(d.daysOutstanding) ; })
+    .attr("y", function(d) { return y(d.collection) ; })
   // .attr("dx", ".75em")
-  .text("width", function(d) { return x(d.invoiceValues); });
+  .text("width", function(d) { return x(d.amountInKes); });
 
 }
 });
 
-// Status check chart
+// STATUS CHECK CHART
 
 
 //dimensions and margins of the graph
@@ -423,7 +510,7 @@ height = 400 - margin.top - margin.bottom;
 
 //append svg object to the body
 
-var svgMainFinance = d3.select("#status-check-chart")
+var svgMainFinanceStatus = d3.select("#status-check-chart")
 .attr("width", width + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
 .append("g")
@@ -441,10 +528,10 @@ data.forEach(function(d){
 //x axis
 
 var x = d3.scaleLinear()
-.domain([0, 100])
+.domain([0, 100]) 
 //round to the nearest whole number
-.rangeRound([0, width], .35)
-svgMainFinance.append("g")
+.rangeRound([0, width])
+svgMainFinanceStatus.append("g")
 
 .attr("transform", "translate(0, " + height + ")")
 .call(d3.axisBottom(x))
@@ -461,7 +548,7 @@ var y = d3.scaleBand()
 .range([0, height])
 .domain(data.map(function(d){ return  d.status;}))
 .padding(.3);
-svgMainFinance.append("g")
+svgMainFinanceStatus.append("g")
 .call(d3.axisLeft(y))
 
 //Rectangular bars
@@ -481,7 +568,7 @@ svgMainFinance.append("g")
 
 
 // title
-svgMainFinance.append("text")
+svgMainFinanceStatus.append("text")
 .attr("x", (width / 2))
 .attr("y", 0 + (margin.top / 10))
 .attr("text-anchor", "middle")
@@ -490,3 +577,23 @@ svgMainFinance.append("text")
 .style("color", "blue")
 .style("text-decoration", "underline")
 .text("Portfolio Probability of Default");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
