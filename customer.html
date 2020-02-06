@@ -23,7 +23,7 @@
 
 	
 </head>
-<body onload="invoiceTableByDefault()">
+<body onload="startOnLoad();">
 
 
 	<main>
@@ -39,20 +39,33 @@
 
 <!-- Section to display the visualization charts -->
 
-		<section id="charts">
+	<section id="charts">
+
+		<div id="default_charts" >
 			<!-- bar chart rendering -->
-			<svg  id="bar-chart">
+			<svg  id="bar-chart" class="chart">
 			</svg>
 			<!-- clients pie chart rendering -->
 			<svg id="clients-chart" class="chart" >
 			</svg>
 			<!-- finance bar charts -->
 			<svg id="finance-chart" class="chart">
-
-
 			</svg>
+		</div>
 
-		</section>
+		<div id="client_default_charts" >
+			<!-- clients pie chart rendering -->
+			<svg id="clients-main-chart" class="chart" >
+			</svg>
+		</div>
+
+		<div id="finance_default_charts" >
+			<svg id="finance-main-chart"></svg>
+			<svg id="status-check-chart" class="chart">
+			</svg>
+		</div>
+
+	</section>
 
 <!-- end of visualization charts -->
 
@@ -545,7 +558,7 @@
 	</footer>
 
 
-	<script src="Js/main.js"></script>
+	<script type="text/javascript" src="Js/main.js"></script>
 
 </body>
 <script type="text/javascript" src="D3/charts.js"></script>
@@ -653,8 +666,18 @@ else if($("#financeTable input:checkbox:checked").length >= 2){
 				});
 			});
 
-
-
+//Load these by default			
+ function startOnLoad(){
+ 	invoiceTableByDefault();
+ 	loadDefaultCharts();
+ }
+// display the invoice table by default on loading the window
+function invoiceTableByDefault(){
+	$("#invoiceTable").show();
+}
+ function loadDefaultCharts(){
+ 	$("#default_charts").show();
+ }
 
 
 

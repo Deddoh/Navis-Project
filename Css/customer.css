@@ -116,6 +116,7 @@ main{
 	background: #fff;
 	display: flex;
 	flex-direction: row;
+	flex-flow: row wrap;
 	box-shadow: 0 0 15px 1px rgba(0 0 0 0.4);
 	box-sizing: border-box;
 	padding: 4px;
@@ -165,7 +166,9 @@ table{
 	display: none;
 }
 
-
+#default_charts, #client_default_charts, #finance_default_charts{
+	display: none;
+}
 
 .hidden{
 	display: none;
@@ -250,19 +253,24 @@ tr td{
 /*status section*/
 .financed{
 	background: #0c8721;
+	opacity: 0.7; 
 }
 .collection-complete{
 background: #054d11;
+opacity: 0.7; 
 }
  .pending{
 background: #967309;
+opacity: 0.7; 
  }
 
  .not-financed{
 background: red;
+opacity: 0.7; 
  }
  .collection-in-progress{
 background: #c9aa67;
+opacity: 0.7; 
  }
 /*end of main section*/
 
