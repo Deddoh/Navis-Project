@@ -74,13 +74,13 @@
 		<div id="location">
 			<div class="autoPopulateFields">
 				<label>City</label><span class="essential">*</span><br>
-				<input type="text" name="city" id="locality" placeholder="Enter city name" required><br>
+				<input type="text" name="city" id="locality" placeholder="Enter city name"  required><br>
 				<!-- <label>County</label><span class="essential">*</span><br>
 				<input type="text" placeholder="County" name="county" id="county" required><br> -->
 				<label>State/Country</label><span class="essential">*</span><br>
-				<input type="text" name="country" id="country" required><br>
+				<input type="text" name="country" id="country" disabled="true" required><br>
 				<label>Zip Code</label><span class="essential">*</span><br>
-				<input type="number" name="zip" id="postal_code" required><br>
+				<input type="number" name="zip" id="postal_code" disabled="true" required><br>
 			</div>
 			
 	</div>
@@ -111,7 +111,8 @@
 		<input type="checkbox" name="track" id="box3"> QuickBooks<br>
 		<input type="checkbox" name="track" id="box4">Sage<br>
 		<input type="checkbox" name="track" id="box5">SAP<br>
-		<input type="checkbox" name="track" id="box6">Other ERP software<br>
+		<input type="checkbox" name="track" id="box6" onchange="displayTextField(this)">Other ERP software<br>
+		<input type="text" name="other_options" id="optionsTextField" style="display: none;"><br>
 </div><br>
 <div class="rbox">
 		<h2>Would you like to participate in <span class="highlight">early access</span>?</h2>
@@ -313,4 +314,33 @@
 	<script type="text/javascript" src="Js/main.js"></script>
 	<script type="text/javascript" src="Js/geolocate.js"></script>
 	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDupApk9SEQN7oiJTAJknUEp59bVmhV9PA&libraries=places&callback=initAutocomplete" async defer></script>
+	 <!-- <script>
+	 function displayTextField(checkBox) {
+	 	var input = document.createElement('input');
+        input.type = "text";
+        input.setAttribute("id", "otherErpSw");
+    if (checkBox.nextSibling.tagName == 'INPUT') {
+        checkBox.parentNode.removeChild(input, checkBox.nextSibling);
+    }
+    else{
+    	$("#otherErpSw").show();
+    }
+}
+
+
+
+
+</script> -->
+
+
+
+<script >
+	function displayTextField(){
+		
+		if($("#box6 input:checkbox:checked")){
+			$("#optionsTextField").show();
+		}
+	}
+	
+</script>
 </html>
