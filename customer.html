@@ -41,7 +41,7 @@
 
 	<section id="charts">
 
-		<div id="default_charts" >
+		<div id="default_charts" class="container">
 			<!-- bar chart rendering -->
 			<svg  id="bar-chart" class="chart">
 			</svg>
@@ -53,14 +53,18 @@
 			</svg>
 		</div>
 
+		<div id="invoice_default_chart" class="container">
+			<svg id="invoice-main-chart" ></svg>
+		</div>
+
 		<div id="client_default_charts" >
 			<!-- clients pie chart rendering -->
 			<svg id="clients-main-chart" class="chart" >
 			</svg>
 		</div>
 
-		<div id="finance_default_charts" >
-			<svg id="finance-main-chart"></svg>
+		<div id="finance_default_charts" class="container" >
+			<svg id="finance-main-chart" class="chart"></svg>
 			<svg id="status-check-chart" class="chart">
 			</svg>
 		</div>
@@ -431,7 +435,7 @@
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
 						<td>1001</td>
 						<td>CustomerA</td>
-						<td>$1,500.00</td>
+						<td>$3073.01</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="financed">Financed</td>
@@ -440,8 +444,8 @@
 					<tr>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
 						<td>1001</td>
-						<td>CustomerA</td>
-						<td>$1,400.00</td>
+						<td>CustomerB</td>
+						<td>$2498.87</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="financed">Financed</td>
@@ -451,8 +455,8 @@
 					<tr>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
 						<td>1001</td>
-						<td>CustomerA</td>
-						<td>$1,500.00</td>
+						<td>CustomerC</td>
+						<td>$3793.92</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="collection-in-progress"> Financed - Collection in Progress</td>
@@ -461,8 +465,8 @@
 					<tr>
 						<td><input type="checkbox" name="checkbox"  id="not-financed"></td>
 						<td>1001</td>
-						<td>CustomerA</td>
-						<td>$1,500.00</td>
+						<td>CustomerD</td>
+						<td>$1163.41</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="not-financed" >Not Financed</td>
@@ -471,8 +475,8 @@
 					<tr>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
 						<td>1001</td>
-						<td>CustomerA</td>
-						<td>$1,500.00</td>
+						<td>CustomerE</td>
+						<td>$231.38</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="pending">Pending</td>
@@ -481,8 +485,8 @@
 					<tr>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
 						<td>1001</td>
-						<td>CustomerA</td>
-						<td>$1,500.00</td>
+						<td>CustomerF</td>
+						<td>$1942.03</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="financed">Financed</td>
@@ -491,8 +495,8 @@
 					<tr>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
 						<td>1001</td>
-						<td>CustomerA</td>
-						<td>$1,500.00</td>
+						<td>CustomerG</td>
+						<td>$1576.28</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="collection-complete">Collection Complete</td>
@@ -501,8 +505,8 @@
 					<tr>
 						<td><input type="checkbox" name="checkbox"  id="not-financed" onload="notFinanced()"></td>
 						<td>1001</td>
-						<td>CustomerA</td>
-						<td>$1,500.00</td>
+						<td>CustomerH</td>
+						<td>$1014.52</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="not-financed" >Not Financed</td>
@@ -512,7 +516,7 @@
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
 						<td>1001</td>
 						<td>CustomerA</td>
-						<td>$1,500.00</td>
+						<td>$529.18</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="pending">Pending</td>
@@ -521,8 +525,8 @@
 					<tr>
 						<td><input type="checkbox" name="checkbox" class="confirm" id="confirm"></td>
 						<td>1001</td>
-						<td>CustomerA</td>
-						<td>$1,500.00</td>
+						<td>CustomerC</td>
+						<td>$3793.92</td>
 						<td>20%</td>
 						<td>$100.18</td>
 						<td class="collection-complete">Collection Complete</td>
