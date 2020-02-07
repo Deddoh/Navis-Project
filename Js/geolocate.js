@@ -14,8 +14,8 @@ function initAutocomplete() {
   autocomplete = new google.maps.places.Autocomplete(
     /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
     {
-      types: ['regions'],
-     componentRestrictions: {country: 'fr'}
+      types: ['(regions)'],
+     componentRestrictions: {country: 'ke'}
   });
 
   // When the user selects an address from the dropdown, populate the address
