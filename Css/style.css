@@ -34,6 +34,16 @@
 	
 }
 
+.logo{
+	height:16px;
+}
+.essential{
+	color: red;
+	font-weight: bold;
+}
+
+
+
 
 html, body{
 	font-family: 'Muller Narrow Light';
@@ -44,17 +54,462 @@ html, body{
 	margin:0;
 	background: #fff;
 
+}
+
+/*SMALL / MEDIUM SCREEN*/
+@media only screen and (max-width: 768px){
+	header{
+		display: table;
+	}
+	header .header-buttons{
+	display: block; 
+	text-align: center;
+	background: #fff;
 
 
 }
 
-.logo{
-	height:16px;
+
+/*nav*/
+/*header links*/
+
+.header-buttons .navbar{
+	padding: 0;
+	font-size: 22px;
+	text-align: center;
+	margin:0 auto;
+	font-weight: 300;
+	}
+
+.header-buttons ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 0 40px;
+	width: fit-content;
 }
-.essential{
-	color: red;
+
+.header-buttons a{
+	text-decoration: none;
+	color: #030580;
+}
+.header-buttons a:hover{
+	color: orange;
+}
+
+
+/*company logo*/
+#logo-brand{
+	text-align: center;
+	margin:0 auto;
+}
+#logo-brand h1{
+	font-size: 40px;
+	}
+ #navHeader{
+	background: #fff;
+	position: absolute;
+}
+
+/*header scroll*/
+/*.header-buttons.scrolled{
+	background-color: #fff !important;
+	transition: background-color 100ms ease-in-out;
+}*/
+/*end of header styling*/
+
+
+/*tab area*/
+#showcase .tag{
+	/*display: flex-block;
+	align-items: center;
+	text-align: center;*/
+	display: table-cell;
+	vertical-align: middle;
+}
+/*sign up button*/
+.tag #navbarRegister{
+	padding: 12px 42px;
+	border: 0;
+	color: #fff;
+	border-radius: 20px;
+	background: #000000;
+	text-decoration: none;
+	/*margin-top: 20px;*/
+	text-align: center;
+}
+.tag #navbarRegister:hover{
+	padding: 15px 47px;
+	color: #e8491d;
+	border-radius: 20px;
+	background: #fff;
+	text-decoration: none;
+	border:1px solid blue;
+}
+.tag h1{
+	font-family:'Muller Narrow Light';
+	font-weight:medium;
+	font-size:60px;
+	color: #030580;
+	padding: 40px 0 20px 0;
+	text-shadow: 2px 2px 8px #030580;
+	text-align: center;
+	line-height: 70px;
+}
+.tag p{
+	font-family: Muller Narrow Medium;
+	text-align: center;
+	font-size: 28px;
+	color: #030580;
+	padding-bottom: 30px;
+
+}
+
+/*end of tag area*/
+
+
+/*header showcase banner*/
+
+header #showcase{
+	background: url('../Images/par.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	/*height: calc(100vh - 100px);*/
+	height: 100vh;
+	width: 100%;
+	
+}
+/*end of showcase area*/
+/*subscription area*/
+#newsletter{
+	display: block;
+	padding:10px 10px;
+	color: #fff;
+	background: orange;
+	height:fit-content;
+	line-height: 40px;
+
+}
+
+#newsletter h1{
+text-align: center;
+}
+#newsletter form{
+	text-align: center;
+	margin: 0 auto;
+}
+
+#newsletter input[type="email"]{
+	padding: 4px;
+	height: 25px;
+	width: calc(100% - 100px);
+}
+
+.subscribe_button{
+	height: 35px;
+	background: #000;
+	border: 0;
+	border-radius: 4px;
+	font-family:'Muller Narrow Medium';
+	text-align: center;
+	color: #ffffff;
+	padding: 4px;
+	margin-top: 10px;
+	font-size: 20px;
+	width: calc(100% - 100px);
+}
+
+/*end of subscription area*/
+
+
+section #register{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	
+}
+
+
+
+
+
+/*registration form*/
+
+
+#registration-form{
+	display: flex;
+	flex: 1 1 auto;
+	width: 90vw;
+	height: calc(100vh- 100px);
+	margin:60px auto 10px auto;
+	position: relative;
+
+}
+
+
+
+#registration-form fieldset{
+	width: 80%;
+	flex: 1 1 auto;
+	margin:0 auto;
+	padding:20px 30px;
+	background: #ffffff;
+	border:0;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	position: relative;
+}
+
+ #preferences .cbox, .rbox{
+	color: #030580;
+}
+
+#select_options .cbox input[type="checkbox"] {
+vertical-align: middle;
+width: auto;
+margin-right: 15px;
+
+}
+
+ #select_options .rbox input[type="radio"]{
+ 	width: auto;
+ 	margin-right: 15px;
+ 	vertical-align: middle;
+ 	padding-top: 30px;
+
+	
+}
+
+#registration-form fieldset:nth-child(n){
+	min-height: calc(100vh - 100px);
+}
+
+
+
+#registration-form fieldset:not(:first-of-type){
+	display: none;
+	
+}
+/*form buttons*/
+#registration-form .action-button{
+	width: 100px;
+	height: 40px;
+	background: #27AE60;
 	font-weight: bold;
+	color: #fff;
+	border:0;
+	text-align: center;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 15px 8px;
+	transition: all .2s;
 }
+
+#registration-form .action-button:hover{
+	transform: scale(1.15);
+}
+
+/* form navigation buttons*/
+.next{
+	font-family: 'Muller Narrow Light';
+	text-align: center;
+	margin-left: 40%;
+		padding-bottom: 3px;
+
+	}
+/*third panel*/
+#preferences #nextButton{
+	float: right;
+}
+
+.submit{
+	font-family: 'Muller Narrow Light';
+	float: right;
+
+}
+.previous{
+	font-family: 'Muller Narrow Light';
+}
+
+#register{
+	/*display: flex;
+	flex-direction: column;
+	align-items: center;*/
+	background: #f1f1f1;
+	height: 100%;
+}
+
+#register legend{
+	color: #030580;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 24px;
+
+}
+#register label, h2{
+	color: #030580;
+}
+
+#register input{
+	width: 95%;
+	padding: 4px;
+	height: 24px;
+
+}
+
+#register select{
+	width: 95%;
+	height: 24px;
+	padding: 4px;
+}
+
+
+/*physical location*/
+#location{
+	display:flex;
+	width:100%;
+	justify-content: column;
+	padding-top: 15px;
+	flex-flow:row wrap;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+/*location input fields*/
+.autoPopulateFields  {
+width: 90%;
+margin: 0 auto;
+}
+
+
+
+/*bank details*/
+#bank{
+	display: flex;
+	flex-direction: column;
+}
+/*bank*/
+#bank #bank_details{
+	display: flex;
+	flex-direction: column;
+	justify-content: column;
+	align-items: flex-start;
+	flex-flow:row wrap;
+	width: 100%;
+}
+
+#bank #bank_details input{
+	width: 90%;
+	
+}
+#bank #bank_details .bankacc_name{
+	flex: 1;
+}
+
+
+/*Doc upload*/
+#bank #fileUpload{
+	display:flex;
+	flex-direction: row;
+	flex: 1 0 250px;
+	justify-content: space-between;
+	align-items: center;
+	color: #030580;
+	padding: 30px 0;
+	margin:0 auto;
+}
+
+
+#fileUpload p, input[type="file"]{
+	padding-bottom: 6px;
+}
+
+ /*#bank input[name="file_upload"]{
+	vertical-align: middle;
+	width: auto;
+	margin-right: 15px;
+	padding-bottom: 6px;
+}
+*/
+#fileUpload .fileType{
+	flex: 1;
+}
+#fileUpload .fileButton{
+	flex: 1;
+}
+/*end of doc upload*/
+/*end registration form*/
+
+
+/*Contact us*/
+ #contact{
+ 	font-family:'Muller Narrow Medium';
+ 	color: #292A80;
+	background:  #fff;
+	overflow:hidden;
+	height: fit-content;
+	
+}
+
+ #contact .heading{
+	font-size: 24px;
+	text-align: center;
+}
+
+#contact #contact-info{
+	display: flex;
+	font-size: 24px;
+	flex-direction: row;
+	justify-content: space-around;
+	padding:30px;
+	width: 85%;
+	overflow: hidden;
+}
+#contact #address{
+	
+	padding-right: 20px;
+	border-right: 2px solid #000;
+}
+ #contacts{
+	padding-left: 20px;
+	border-right: none;
+}
+#contacts a{
+	text-decoration: none;
+	color:#292A80;
+}
+
+
+
+/*footer*/
+footer {
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+color: #fff;
+background: #292A80;
+height: 60px;
+}
+
+footer p{
+	font-size: 25px;
+	font-weight: bold;
+
+}
+footer .scroll-to-top a{
+text-decoration: none;
+color: #fff;
+}
+	
+}
+
+/*END OF MEDIUM SCREEN*/
+
+
+
+/*Desktop size screen*/
+@media only screen and (min-width: 768px){
 
 
 /*header*/
@@ -178,6 +633,7 @@ header .header-buttons{
 	font-size:60px;
 	color: #030580;
 	padding-bottom: 20px;
+	text-shadow: 2px 2px 8px #030580;
 }
 .tag p{
 	font-family: Muller Narrow Medium;
@@ -523,4 +979,6 @@ footer .scroll-to-top a{
 text-decoration: none;
 color: #fff;
 padding-left: 100px;
+}
+
 }

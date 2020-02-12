@@ -20,5 +20,16 @@
   "bugs": {
     "url": "https://github.com/Deddoh/Navis-Project/issues"
   },
-  "homepage": "https://github.com/Deddoh/Navis-Project#readme"
+  "homepage": "https://github.com/Deddoh/Navis-Project#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-import-css": "^0.1.3",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.11.0",
+    "run-sequence": "^2.2.1"
+  }
 }

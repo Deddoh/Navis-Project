@@ -50,6 +50,8 @@ svgInvoice.append("g")
 .data(data)
 .enter()
 .append("rect")
+.transition()
+.duration(2000)
 .attr("x", x(0))
 .attr("y", function(d){return y(d.daysOutstanding);})
 .attr("width", function(d){return  x(d.invoiceValues);})
@@ -57,7 +59,7 @@ svgInvoice.append("g")
 
 .attr("height", y.bandwidth())
 .attr("fill", "blue")
-.on("click", placeholder);
+// .on("click", placeholder);
 
 // event listener
 var placeholder = ()=>{
@@ -147,6 +149,9 @@ g.append("path")
 .attr("d", arc)
 .on("click", hover)
 // .on("click", displayBarGraph())
+.transition()
+.duration(800)
+.delay(50)
 .style("opacity", 0.8)
 .style("fill", function(d) {return color(d.data.client);});
 
@@ -225,6 +230,8 @@ svgFinance.append("g")
 .data(data)
 .enter()
 .append("rect")
+.transition()
+.duration(2000)
 .attr("x", x(0))
 .attr("y", function(d){return y(d.status);})
 .attr("width", function(d){return x(d.percent);})
@@ -301,6 +308,8 @@ svgMainInvoice.append("g")
 .data(data)
 .enter()
 .append("rect")
+.transition()
+.duration(2000)
 .attr("x", x(0))
 .attr("y", function(d){return y(d.daysOutstanding);})
 .attr("width", function(d){return  x(d.invoiceValues);})
@@ -308,7 +317,7 @@ svgMainInvoice.append("g")
 
 .attr("height", y.bandwidth())
 .attr("fill", "blue")
-.on("mouseover", placeholder);
+// .on("mouseover", placeholder);
 
 // event listener
 var placeholder = ()=>{
@@ -337,7 +346,7 @@ var placeholder = ()=>{
 
 
 
-// CLIENTS MAIN CHARTS
+//################### CLIENTS MAIN CHARTS ##################
 
 // clients' pie chart
 
@@ -367,7 +376,7 @@ var label = d3.arc()
 var pie = d3.pie()
 //not sorting
 .sort(null)
-// value to be displayed will be Amount
+// value to be computed will be Amount
 .value(function(d){return d.Amount;});
 
 //calling the DOM
@@ -404,8 +413,15 @@ g.append("text")
 // append path, pie for each client
 g.append("path")
 .attr("d", arc)
-.on("click", hover)
-// .on("click", displayBarGraph())
+.on("mouseover", function(d){hover();})
+.on("click", function(d)
+{
+  updateBarGraph(d.data.customerB);
+  // updateBarGraph(console.log(selectedVar);
+  // get data using indexes
+  // updateBarGraph()
+  // console.log(d.data.client);})
+})
 .style("opacity", 0.8)
 .style("fill", function(d) {return color(d.data.client);});
 
@@ -425,7 +441,10 @@ g.append("text")
 
 
 
-// FINANCE MAIN CHARTS
+//######################### FINANCE MAIN CHARTS #############################
+
+
+
 // Invoice Bar Chart
 //dimensions and margins of the graph
 var margin = {top:20, right:50, bottom:40, left:140},
@@ -476,6 +495,8 @@ svgMainFinance.append("g")
 .data(data)
 .enter()
 .append("rect")
+.transition()
+.duration(2000)
 .attr("x", x(0))
 .attr("y", function(d){return y(d.collection);})
 .attr("width", function(d){return  x(d.amountInKes);})
@@ -483,7 +504,7 @@ svgMainFinance.append("g")
 
 .attr("height", y.bandwidth())
 .attr("fill", "blue")
-.on("click", placeholder);
+// .on("click", placeholder);
 
 // event listener
 var placeholder = ()=>{
@@ -557,6 +578,8 @@ svgMainFinanceStatus.append("g")
 .data(data)
 .enter()
 .append("rect")
+.transition()
+.duration(2000)
 .attr("x", x(0))
 .attr("y", function(d){return y(d.status);})
 .attr("width", function(d){return x(d.percent);})
@@ -586,14 +609,87 @@ svgMainFinanceStatus.append("text")
 
 
 
+// ########################### ONCLICK PIE CHART FUNCTIONS ###############################
 
 
 
 
+// Invoice Bar Chart
+//dimensions and margins of the graph
+
+var margin = {top:20, right:50, bottom:40, left:140},
+width = 460 - margin.left - margin.right,
+height = 400 - margin.top - margin.bottom;
+
+//append svg object to the body
+
+var svgPieData = d3.select("#slice-bar-chart")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+var updateBarGraph = (selectedVar)=>{
+//add csv containing the data
+d3.csv("pieSliceData.csv", function(data){
+
+
+
+//x axis
+
+var x = d3.scaleLinear()
+.domain([0, d3.max(data, function(d){ return +d[selectedVar]; })])
+//round to the nearest whole number
+.rangeRound([0, width]);
+var x_axis = svgPieData.append("g")
+.attr("class", "myXaxis")
+.transition()
+.duration(1000)
+.attr("transform", "translate(0, " + height + ")")
+.call(d3.axisBottom(x))
+.selectAll("text")
+.attr("transform", "translate(-10, 0)rotate(-45)")
+.style("text-anchor", "end");
+
+
+
+var y = d3.scaleBand()
+.range([0, height])
+.domain(data.map(function(d){ return d.period;}))
+.padding(.4);
+var y_axis = svgPieData.append("g")
+.transition()
+.duration(1000)
+.call(d3.axisLeft(y));
+
+//Rectangular bars
+
+    // variable m: map data to existing bars
+ var m = svgPieData.selectAll("rect")
+.data(data)
+m.enter()
+.append("rect")
+.merge(m)
+.transition()
+.duration(1000)
+.attr("x", x(0))
+// .attr("x", function(d){return x(d[selectedVar]);})
+
+.attr("y", function(d){return y(d.period);})
+.attr("width", function(d) { return x(d[selectedVar]); })
+.attr("height", y.bandwidth())
+.attr("fill", "blue");
+m.exit()
+m.remove();
+  });
+
+}
+
+// Initialize plot
+updateBarGraph('customerA');
 
 
 
 
-
-
-
+// end of invoice charts
