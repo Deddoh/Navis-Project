@@ -1,0 +1,7 @@
+period,customerA,customerB
+Current,3073.01,3
+Outstanding(1-30 days),393.79,2
+Outstanding(31-60 days),2679.22,1
+Outstanding(61-90 days),0,23
+Outstanding(91-120 days),0,34
+Outstanding(Over 120 days),0,11

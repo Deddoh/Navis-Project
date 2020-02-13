@@ -301,7 +301,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    color: #fff;
+
 }
 footer h1{
 
