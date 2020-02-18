@@ -21,6 +21,44 @@ body{
 	height: 16px;
 }
 
+/*############ MEDIUM SCREEN ##############*/
+@media only screen and (max-width: 768px and min-width: 300px){
+	main{
+	flex: 1 1 auto;
+	/*background-color: #222;*/
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+
+	flex-direction: column;
+}
+
+#charts{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-flow: column wrap;
+	background-color: #fff;
+	box-sizing: border-box;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	flex: 1 1 auto;
+	margin: 20px 1px 0 1px;
+}
+
+
+
+/*individual charts*/
+
+.chart{
+	/*give each element equal space within the display section*/
+	flex: 1; 
+}
+
+
+}
+
+
+/*############END OF MEDIUM SCREEN ##############*/
 /*main as a flexible container */
 
 main{

@@ -1,4 +1,8 @@
 
+
+
+
+
 html, body{
 	height: 100vh;
 	font-family: 'Muller Narrow Light';
@@ -16,6 +20,56 @@ body{
 	flex-direction: column;
 	margin: 0;
 	background: #f4f4f4;
+	
+}
+
+
+
+@media only screen and (max-width: 768px){
+
+html, body{
+	min-height: calc(100% - 100px);
+	font-family: 'Muller Narrow Light';
+	font-size: 24px;
+	font-weight: normal;
+	color: #292A80;
+	min-width:300px;
+}
+
+
+
+aside{
+	flex: 0 0 50px;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	/*border:1px solid black;*/
+	background: #fff;
+	
+}
+ /*font size for the icons*/ 
+aside i .fa {
+	font-size: 1em;  
+}
+
+li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 	
 }
 
@@ -48,12 +102,14 @@ aside{
 }
 */
 
+
 main{
 	display:flex;
 	
 	flex: 1 0 auto;
 	
 }
+
 
 aside{
 	flex: 0 0 50px;
@@ -64,6 +120,7 @@ aside{
 	align-items: center;
 	/*border:1px solid black;*/
 	background: #000;
+	min-height: calc(100% - 100px);
 }
  /*font size for the icons*/ 
 aside i .fa {
@@ -87,8 +144,10 @@ li{
 /*top nav section*/
 
 #top_nav{
-	display: inline-flex;
+	display:flex;
 	flex-direction: row;
+	margin: 0 auto;
+	width: 93vw;
 	justify-content: space-between;
 	align-items: center;
 	height: 50px;
@@ -141,13 +200,12 @@ li{
 
 /*performance area*/
 
-#performance{
+#portfolio #performance{
 	background: #fff;
-	display: inline-flex;
+	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	margin:10px 0 10px 15px;
-	/*width: calc(100vw - 100px);*/
+	margin:10px auto;
 	width: 93vw;
 	box-sizing: border-box;
 	box-shadow:   0 0 15px 1px rgba(0, 0, 0, 0.15);
@@ -226,6 +284,7 @@ width: 93vw;
 	border-bottom: 0;
 	border-left: 0;
 	border-right: 0;*/
+	text-align: center;
 	border: none;
 	background: #fff;
 	box-sizing: border-box;
