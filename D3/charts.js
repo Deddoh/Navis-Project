@@ -46,35 +46,80 @@ svgInvoice.append("g")
 
 //Rectangular bars
 
-.selectAll("rect")
+svgInvoice.selectAll("rect")
 .data(data)
 .enter()
 .append("rect")
 .transition()
 .duration(2000)
+// .on("click", placeholder)
 .attr("x", x(0))
 .attr("y", function(d){return y(d.daysOutstanding);})
 .attr("width", function(d){return  x(d.invoiceValues);})
-
-
 .attr("height", y.bandwidth())
-.attr("fill", "blue")
+.attr("fill", "blue");
+svgInvoice.selectAll("text")
+.data(data)
+.enter()
+.append("text")
+.text(function(d){return d;})
+.attr("y", function(d, i){
+  return y(i) + y.bandwidth() / 2;
+})
+.attr("x", function(d){
+  return x(d) - 25;
+})
+.attr("fill", "#000")
+.attr("text-anchor", "end");
+// .selectAll("text")
+// .data(data)
+// .enter()
+// .append("text")
+// .attr("text-anchor", "end")
+// // .attr("y", function(d, i){
+// //   return i * (height / 2) + 10;
+// // })
+// .attr("y", function(d, i){
+//   return i * (height / data.length);})
+// .attr("x", x(0))
+// .attr("width", function(d){return  x(d.invoiceValues);})
+// .text(function(d){return d + "$";})
+// .attr("color", "red")
+
+});
+
 // .on("click", placeholder);
 
 // event listener
-var placeholder = ()=>{
-  y.style("fill", "green")
- svgInvoice.selectAll("text")
-   .data(data)
-   .enter()
-   .append("text")
-   .attr("x", x(0))
-    .attr("y", function(d) { return y(d.daysOutstanding) ; })
-  // .attr("dx", ".75em")
-  .text("width", function(d) { return x(d.invoiceValues); });
+// var placeholder = ()=>{
+//   y.style("fill", "green")
+//  svgInvoice.selectAll("text")
+//    .data(data)
+//    .enter()
+//    .append("text")
+//    .attr("x", x(0))
+//     .attr("y", function(d) { return y(d.daysOutstanding) ; })
+//   // .attr("dx", ".75em")
+//   .text("width", function(d) { return x(d.invoiceValues); });
 
-}
-});
+// }
+// var placeholder = ()=>{
+// svgInvoice.selectAll("text")
+// .data(data)
+// .enter()
+// .append("text")
+// .text(function(d){return d;})
+// .attr("y", function(d, i){
+//   return i * (height / data.length) + 10;
+// })
+// .attr("x", function(d){
+//   return width - (d * 4) + 30;
+// })
+// .attr("fill", "red");
+// }
+// });
+
+
 
 
 // end of invoice charts
@@ -192,7 +237,7 @@ var svgFinance = d3.select("#finance-chart")
 //add csv containing the data
 
 d3.csv("status.csv", function(data){
-var format = d3.format(".0%");
+var format = d3.format(".1%");
 data.forEach(function(d){
    format(d.percent) +"%";
 });
@@ -210,6 +255,7 @@ svgFinance.append("g")
 .call(d3.axisBottom(x))
 .selectAll("text")
 .attr("transform", "translate(-10, 0)rotate(-45)")
+
 .style("text-anchor", "end");
 
 var bar_colors = d3.scaleOrdinal()

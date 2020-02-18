@@ -148,7 +148,7 @@ function displayfinanceCharts(){
 	$("#finance_default_charts").css("justify-content", "space-between");
 }
 else{
-		document.getElementById('finance_default_charts').style.display = "none";
+		document.getElementById('finance_default_charts').style.display = "table";
 		document.getElementById("finance").removeAttribute("class", "active");
 
 }

@@ -108,6 +108,11 @@ html, body{
  #navHeader{
 	background: #fff;
 	position: absolute;
+	width: 100%;
+	/*text-align: center;
+	margin:0 auto;
+	justify-content: center;*/
+
 }
 
 /*header scroll*/
@@ -225,8 +230,8 @@ section #register{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	min-height: 100vh;
-	
+	height: 100%;
+	background: #f1f1f1;
 }
 
 
@@ -240,7 +245,7 @@ section #register{
 	display: flex;
 	flex: 1 1 auto;
 	width: 90vw;
-	height: calc(100vh- 100px);
+	height: fit-content;
 	margin:60px auto 10px auto;
 	position: relative;
 
@@ -258,10 +263,16 @@ section #register{
 	border-radius: 3px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 	position: relative;
+	margin-top: 30px;
 }
 
  #preferences .cbox, .rbox{
 	color: #030580;
+	padding-bottom: 30px;
+}
+
+#preferences h2{
+	font-size: 28px;
 }
 
 #select_options .cbox input[type="checkbox"] {
@@ -282,6 +293,7 @@ margin-right: 15px;
 
 #registration-form fieldset:nth-child(n){
 	min-height: calc(100vh - 100px);
+	/*height: fit-content;*/
 }
 
 
@@ -303,6 +315,7 @@ margin-right: 15px;
 	cursor: pointer;
 	padding: 15px 8px;
 	transition: all .2s;
+	justify-content: flex-end;
 }
 
 #registration-form .action-button:hover{
@@ -336,7 +349,7 @@ margin-right: 15px;
 	flex-direction: column;
 	align-items: center;*/
 	background: #f1f1f1;
-	height: 100%;
+	/*height: 100%;*/
 }
 
 #register legend{
@@ -504,11 +517,11 @@ color: #fff;
 	
 }
 
-/*END OF MEDIUM SCREEN*/
+/*############### END OF MEDIUM SCREEN ################*/
 
 
 
-/*Desktop size screen*/
+/*##################### Desktop size screen #######################*/
 @media only screen and (min-width: 768px){
 
 
@@ -589,6 +602,7 @@ header .header-buttons{
  #navHeader{
 	background: #fff;
 	position: absolute;
+	width: 100%;
 }
 /*header scroll*/
 
